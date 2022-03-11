@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    background-color: #CBF3D4;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../pictures/pexels-nubia-navarro-(nubikini)-386024.jpg");
+    background-repeat: no-repeat;
+    backroud-position: middle;
+    background-attachment: fixed;
+}
+h1  {
+
+}
