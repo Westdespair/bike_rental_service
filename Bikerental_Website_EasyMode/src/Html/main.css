@@ -3,11 +3,109 @@
 body {
     background-color: #CBF3D4;
     font-family: 'Open Sans', sans-serif;
-    background-image: url("../pictures/pexels-nubia-navarro-(nubikini)-386024.jpg");
-    background-repeat: no-repeat;
-    backroud-position: middle;
-    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+
 }
-h1  {
+
+.header{
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: left;
+    scale: initial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 2vw;
+    padding-top: 1%;
+    padding-left: 2%;
+}
+
+
+.hero-section {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+    width: 100%;
+    padding-top: 5%;
+}
+
+.hero {
+    display: table-cell;
+    vertical-align: middle;
+    horiz-align: center;
+    background-image: url('../pictures/pexels-nubia/test.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.hero__text {
+    margin: auto;
+    text-align: center;
+    width: 40vw;
+    padding: 5vw;
+    font-family: sans-serif;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero__text__heading {
+    font-size: 7vw;
+}
+
+.hero__text__body {
+    padding-top: 1vw;
+    font-size: 2vw;
+}
+
+@media only screen and (max-width: 700px) {
+    .hero__text {
+        width: 50vw;
+    }
+
+    .hero__text__heading {
+        font-size: 11vw;
+    }
+
+    .hero__text__body {
+        font-size: 4vw;
+    }
+}
+
+.slogan{
+    background-color: white;
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 100px;
+    top: 800px;
+}
+
+.slogan-text{
+    padding-left: 30%;
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    scale: initial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 2vw;
+
+}
+
+.text-section{
+    position: relative;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 1000px;
+}
+.footer{
 
 }
