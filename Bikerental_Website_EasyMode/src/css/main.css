@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
-    background-color: #CBF3D4;
+    background-color: #63ff5e;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -9,6 +9,9 @@ body {
 }
 
 .header{
+
+}
+.header-text{
     float: left;
     position: relative;
     top: 0;
@@ -22,6 +25,33 @@ body {
     padding-left: 2%;
 }
 
+button{
+    scale: 4;
+}
+
+.header-button-1{
+    cursor: pointer;
+    border: 1px solid #000000;
+    height: 4vw;
+    width: 4vw;
+    color: #000000;
+    background: transparent url("../pictures/search-2906.png") no-repeat center center;
+    background-size: 3vw;
+    box-shadow: transparent;
+    margin-left: 58%;
+    margin-top: 1%;
+}
+.header-button-2{
+    cursor: pointer;
+    border: 1px solid #000000;
+    height: 4vw;
+    width: 4vw;
+    color: #000000;
+    background: transparent url("../pictures/menu_icon-icons.com_72311.png") no-repeat center center;
+    background-size: 3vw;
+    box-shadow: transparent;
+
+}
 
 .hero-section {
     display: table;
@@ -29,9 +59,9 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 80%;
+    height: 100%;
     width: 100%;
-    padding-top: 5%;
+    padding-top: 7%;
 }
 
 .hero {
@@ -40,7 +70,7 @@ body {
     horiz-align: center;
     background-image: url('../pictures/pexels-nubia/test.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
 
 }
 
@@ -84,7 +114,7 @@ body {
     margin-right: auto;
     position: relative;
     padding: 100px;
-    top: 800px;
+    top: 65vw;
 }
 
 .slogan-text{
