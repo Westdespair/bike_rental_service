@@ -3,67 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"   content="width=device-width, initial-scale=1"/>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../pictures/bicycle.png" />
-    <title>Keep Rolling, Rolling, Rolling</title>
     <link rel="stylesheet" href="../css/main.css" type="text/css" />
 
+    <title>Keep Rolling, Rolling, Rolling</title>
 
 
+    <style>
+        .container {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar2 {opacity: 0;}
+
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    </style>
 </head>
 <body>
 
+
+
 <div class="header">
-    <div class="header-text">
+
+    <div class="header-text" onclick="">
         Keep Rolling, Rolling, Rolling
     </div>
-    <button type="button" class="header-button-1" onclick="">
 
-    </button>
-    <button type="button" class="header-button-2" onclick="" >
+    <button type="button" class="search-button" onclick="" >
 
-    </button>
+        </button>
+
+
+
+    <div class="dropdown">
+
+
+
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+
+
+
+        <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">Find a bike</a>
+            <a href="#">Contact us</a>
+            <a href="#">About us</a>
+        </div>
+    </div>
+
+
 
 </div>
 
 <div class="hero-section">
     <div class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-
-        <h1 class="hero-title">
-
-        </h1>
-
 
     <button type="button" class="hero-button" onclick="">
         Choose your companion
     </button>
 
-            </div>
-        </div>
     </div>
 </div>
 
-<!--
-<picture>
-
-    <source media="(max-width: 640px)" sizes="100vw"
-            srcset="../pictures/pexels-nubia/pexels-nubia-750x400.jpg">
-
-    <source type="image/webp" sizes="80vw"
-            srcset="../pictures/pexels-nubia/pexels-nubia-2400.webp, ../pictures/pexels-nubia/pexels-nubia-1600.webp">
-
-    <source media="image/jpeg" sizes="80vw"
-            srcset="../pictures/pexels-nubia/pexels-nubia-2400.jpg, ../pictures/pexels-nubia/pexels-nubia-1600.jpg ">
-
-    <img src="../pictures/pexels-nubia/pexels-nubia-1600.jpg" alt="bb" width="1200" height="800">
-
-
-</picture>
-
-
-<button>Choose your companion</button>
--->
 
 <div class="slogan">
     <div class="slogan-text">
@@ -75,12 +100,19 @@
     <div class="text-body">
         Our service makes it fast and easy to rent a bike in seconds and leave it at any place convenient to you. We clean up after you - our service-guys pick up all the bikes within 2 hours.
 
+        <br>
+        <br>
+
         We have 120 bikes available in Ålesund. New bikes upgraded every month according to latest trends. 20 brand new electric bikes waiting for you!
+
+        <br>
+        <br>
 
         We are true to the BYOWT concept: Bring Your Own Winter Tires! Nothing brings a warm home feeling better than BYOWT!
 
     </div>
 </div>
+
 
 
 </body>
