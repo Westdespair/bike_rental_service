@@ -1,0 +1,33 @@
+
+
+body, html {
+    background-color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+
+
+.header{
+    height: 88px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-text {
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: left;
+    scale: initial;
+    font-weight: bold;
+    color: #0A561B;
+    font-size: 2.4em;
+    height: fit-content;
+}
