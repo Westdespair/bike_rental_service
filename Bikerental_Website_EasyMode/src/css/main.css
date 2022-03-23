@@ -151,3 +151,49 @@ body {
 
 }
 
+.selectionText{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom:50px;
+    margin-top: 60px;
+
+}
+
+.buttonContainer{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    justify-content: space-evenly;
+    height: 400px;
+    align-content: space-evenly;
+
+}
+
+.bicycle-button-Yellow {
+    background-color: seagreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+}
+
+.bicycle-button-Brown{
+    background-color: seagreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+}
+
+.bicycle-button-Green{
+    background-color: seagreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+
+}
+
+.bicycle-button-AnyBike{
+    background-color: seagreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+}
