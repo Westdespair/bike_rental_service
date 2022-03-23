@@ -14,8 +14,7 @@ background-color: rgba(152, 66, 211, 0.63);
 }
 
 body {
-    background-color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;    font-family: 'Open Sans', sans-serif;
     padding: 0;
     max-width: 1200px;
     margin: auto;
@@ -32,6 +31,27 @@ body {
     align-items: center;
     background-color: #ffffff;
 }
+
+.header-bar{
+    width: 1200px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: -2px;
+}
+
+.header-logo{
+    background: transparent url("../pictures/LogoSample_ByTailorBrands.jpg") no-repeat center center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    height: 84px;
+    width: 120px;
+    color: #000000;
+    background-size: cover;
+    box-shadow: transparent;
+    margin-left: 30px;
+
+}
+
 .header-text {
     float: left;
     position: relative;
