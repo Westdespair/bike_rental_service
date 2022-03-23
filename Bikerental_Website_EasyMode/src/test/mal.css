@@ -2,15 +2,9 @@
 @import url('https://fonts.google.com/specimen/Bebas+Neue#standard-styles');
 
 html{
-    background-image: url("../pictures/4312x2875-159820-alesund-4k-ultra-hd-wallpaper.jpg");
+    background-image: url("../pictures/ålesund-norway-under-the-northern-lights-wallpaper.jpg");
     height: 100%;
     background-size: cover;
-    background-blend-mode: darken;
-
-}
-
-.html::before{
-background-color: rgba(152, 66, 211, 0.63);
 }
 
 body {
@@ -88,66 +82,3 @@ body {
     margin-right: 20px;
     display: flex;
 }
-
-.hero-section {
-    margin: auto;
-    height: 70%;
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../pictures/pexels-nubia/pexels-nubia-navarro-386024.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-
-
-}
-
-.hero{
-
-}
-
-.hero-button{
-    cursor: pointer;
-    border: 3px solid black;
-    color: black;
-    box-shadow: blanchedalmond;
-
-    font-weight: bold;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.3em;
-
-    background: green;
-
-}
-
-.slogan{
-    background-color: white;
-
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    padding: 2em;
-
-}
-
-.slogan-text{
-
-    text-align: center;
-    scale: initial;
-    font-weight: bold;
-    color: #000000;
-    font-size: 2vw;
-
-
-}
-
-.text-section{
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffff;
-}
-.footer{
-
-}
-
