@@ -1,28 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.google.com/specimen/Bebas+Neue#standard-styles');
+
 
 html{
-    background-image: url("../pictures/4312x2875-159820-alesund-4k-ultra-hd-wallpaper.jpg");
+
     height: 100%;
     background-size: cover;
     background-blend-mode: darken;
 
 }
 
-.html::before{
-background-color: rgba(152, 66, 211, 0.63);
+.header-bar{
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    position: relative;
+    margin-top: -2px;
+}
+
+heropart{}
+
+.hero-img{
+    top: 20px;
+    margin: auto;
+    height: 38vw;
+    max-width: 2000px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../pictures/pexels-nubia/pexels-nubia-stretch.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    size: auto;
+    position: relative;
+    display: block;
+}
+
+.hero-button-background {
+    background-color: rgba(0, 0, 0, 0.69);
+    left: 60%;
+    top: 50%;
+    width: 27vw;
+    height: 7vw;
+    position: relative;
+    
+    border-radius: 10px;
+
+
+}
+
+.hero-button{
+    cursor: pointer;
+    border: 2px solid #2c2c2c;
+    color: #2c2c2c;
+    box-shadow: blanchedalmond;
+    background: #2AF392;
+
+    font-weight: bold;
+    font-size: 1.6vw;
+    vertical-align: center;
+    horiz-align: center;
+    border-radius: 10px;
+
+    width: 25vw;
+    height: 3vw;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 3.5%;
 }
 
 body {
     background-color: #ffffff;    font-family: 'Open Sans', sans-serif;
     padding: 0;
-    max-width: 1200px;
+    max-width: 3600px;
     margin: auto;
     height: 100%;
+}
+
+smallerBody{
+    max-width: 1200px;
+    padding: 0;
+    margin: auto;
+    height: 100%;
+
 
 }
 
 .header{
+    max-width: 1200px;
     height: 88px;
     margin-left: auto;
     margin-right: auto;
@@ -30,13 +96,6 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-}
-
-.header-bar{
-    width: 1200px;
-    height: 2px;
-    background-color: #000000;
-    margin-top: -2px;
 }
 
 .header-logo{
@@ -52,20 +111,6 @@ body {
 
 }
 
-.header-text {
-    float: left;
-    position: relative;
-    top: 0;
-    left: 0;
-    text-align: left;
-    scale: initial;
-    font-weight: bold;
-    color: #000000;
-    font-size: 2.4em;
-    height: fit-content;
-
-    padding-left: 1vW;
-}
 .container {
     display: inline-block;
     cursor: pointer;
@@ -109,36 +154,6 @@ body {
     display: flex;
 }
 
-.hero-section {
-    margin: auto;
-    height: 70%;
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../pictures/pexels-nubia/pexels-nubia-navarro-386024.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-
-
-}
-
-.hero{
-
-}
-
-.hero-button{
-    cursor: pointer;
-    border: 3px solid black;
-    color: black;
-    box-shadow: blanchedalmond;
-
-    font-weight: bold;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.3em;
-
-    background: green;
-
-}
 
 .slogan{
     background-color: white;
@@ -151,21 +166,18 @@ body {
 }
 
 .slogan-text{
-
+    color: #2c2c2c;
     text-align: center;
     scale: initial;
     font-weight: bold;
-    color: #000000;
     font-size: 2vw;
-
-
 }
 
 .text-section{
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ffffff;
+    color: #2c2c2c;;
 }
 .footer{
 
@@ -181,39 +193,64 @@ body {
 
 .buttonContainer{
     display: grid;
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 100px 100px;
+    grid-template-columns: 20vw 20vw;
+    grid-template-rows: 13vw 13vw;
     justify-content: space-evenly;
-    height: 400px;
+    height: 30vw;
     align-content: space-evenly;
+
 
 }
 
 .bicycle-button-Yellow {
-    background-color: seagreen;
+    cursor: pointer;
+    background:  transparent url("../pictures/Bicycle/yellow.png") no-repeat center center;
+    background-size: cover;
+
+    width: 20vw;
+    height: 13vw;
+
     border: none;
     color: white;
-    padding: 15px 32px;
+
 }
 
 .bicycle-button-Brown{
-    background-color: seagreen;
+    cursor: pointer;
+    background:  transparent url("../pictures/Bicycle/brown.png") no-repeat center center;
+    background-size: cover;
+
+    width: 20vw;
+    height: 13vw;
+
     border: none;
     color: white;
-    padding: 15px 32px;
+
 }
 
 .bicycle-button-Green{
-    background-color: seagreen;
+    cursor: pointer;
+    background:  transparent url("../pictures/Bicycle/green.png") no-repeat center center;
+    background-size: cover;
+
+    width: 20vw;
+    height: 13vw;
+
     border: none;
     color: white;
-    padding: 15px 32px;
+
 
 }
 
 .bicycle-button-AnyBike{
-    background-color: seagreen;
+    cursor: pointer;
+    background:  transparent url("../pictures/Bicycle/any.png") no-repeat center center;
+    background-size: cover;
+
+    width: 20vw;
+    height: 13vw;
+
     border: none;
     color: white;
-    padding: 15px 32px;
+
 }

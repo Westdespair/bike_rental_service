@@ -82,3 +82,16 @@ body {
     margin-right: 20px;
     display: flex;
 }
+
+/* Rectangle 8 */
+
+position: absolute;
+width: 144px;
+height: 45px;
+left: 262px;
+top: 359px;
+
+background: #2AF392;
+border-radius: 10px;
+
+
