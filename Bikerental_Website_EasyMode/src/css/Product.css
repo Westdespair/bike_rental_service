@@ -1,3 +1,7 @@
+:root{
+    --spacing: 20px;
+}
+
 .selectionText{
     text-align: center;
     font-size: 1.5em;
@@ -9,61 +13,94 @@
     display: grid;
     grid-template-columns: 20vw 20vw;
     grid-template-rows: 13vw 13vw;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 30vw;
-    align-content: space-evenly;
+    align-content: space-between;
+
 
 
 }
 
 .bicycle-button-Yellow {
     cursor: pointer;
-    background:  transparent url("../pictures/Bicycle/yellow.png") no-repeat center center;
-    background-size: cover;
+    background:  transparent url("../pictures/Bicycle/yellow.png") no-repeat top center;
+    background-size: contain;
 
     width: 20vw;
-    height: 13vw;
+    height: 15vw;
+    margin-right: var(--spacing);
 
-    border: none;
-    color: white;
+    border: 2px solid gray;
+    border-radius: 8px;
+    color: gray();
 
+}
+
+.yellow{
+    margin-top: 180px;
+    font-size: 1.5em;
 }
 
 .bicycle-button-Brown{
     cursor: pointer;
-    background:  transparent url("../pictures/Bicycle/brown.png") no-repeat center center;
-    background-size: cover;
+    background:  transparent url("../pictures/Bicycle/brown.png") no-repeat top center;
+    background-size: contain;
+
+
+
 
     width: 20vw;
-    height: 13vw;
+    height: 15vw;
+    margin-left: var(--spacing);
 
-    border: none;
-    color: white;
+    border: 2px solid gray;
+    border-radius: 8px;
+    color: gray();
+
+}
+
+.brown{
+    margin-top: 180px;
+    font-size: 1.5em;
 
 }
 
 .bicycle-button-Green{
     cursor: pointer;
-    background:  transparent url("../pictures/Bicycle/green.png") no-repeat center center;
-    background-size: cover;
+    background:  transparent url("../pictures/Bicycle/green.png") no-repeat top center;
+    background-size: contain;
 
     width: 20vw;
-    height: 13vw;
+    height: 15vw;
+    margin-right: var(--spacing);
 
-    border: none;
-    color: white;
+    border: 2px solid gray;
+    border-radius: 8px;
+    color: gray();
 
 
 }
 
-.bicycle-button-AnyBike {
+.green{
+    margin-top: 180px;
+    font-size: 1.5em;
+}
+
+.bicycle-button-AnyColor {
     cursor: pointer;
-    background: transparent url("../pictures/Bicycle/any.png") no-repeat center center;
-    background-size: cover;
+    background: transparent url("../pictures/Bicycle/any.png") no-repeat top center;
+    background-size: contain;
 
     width: 20vw;
-    height: 13vw;
+    height: 15vw;
+    margin-left: var(--spacing);
 
-    border: none;
-    color: white;
+    border: 2px solid gray;
+    border-radius: 8px;
+    color: gray();
+}
+
+.anycolor{
+    margin-top: 180px;
+    font-size: 1.5em;
 }
