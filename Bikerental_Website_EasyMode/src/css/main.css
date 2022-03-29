@@ -174,21 +174,92 @@ smallerBody{
 }
 
 .text-section{
-    max-width: 640px;
+    /*padding-left: 80px;
+    padding-right: 80px;*/
     margin-left: auto;
     margin-right: auto;
-    color: #2c2c2c;;
+    color: #2c2c2c;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
 }
-.footer{
+
+.text-body1{
+    width: 23vw;
+    height: 23vw;
 
 }
+
+.text-body11{
+    background: url("../pictures/3pic/jonny-kennaugh-nPOtzvGLYW0-unsplash.jpg") no-repeat top center;
+    background-size: cover;
+    position: relative;
+    display: block;
+    border: none;
+
+    width: 22vw;
+    height: 14vw;
+}
+
+.text-body2{
+    width: 23vw;
+    height: 23vw;
+
+}
+
+.text-body21{
+    background: url("../pictures/3pic/city-gd853d039d_640.jpg") no-repeat top center;
+    background-size: cover;
+    size: auto;
+    position: relative;
+    display: block;
+    border: none;
+
+    width: 22vw;
+    height: 14vw;
+}
+
+.text-body3{
+    width: 23vw;
+    height: 23vw;
+
+}
+
+.text-body31{
+    background: url("../pictures/3pic/ann-arbor-1572240.jpg") no-repeat top center;
+    background-size: cover;
+    size: auto;
+    position: relative;
+    display: block;
+    border: none;
+
+
+    width: 22vw;
+    height: 14vw;
+}
+
+.footer{
+    margin-top: 50px;
+
+    height: 200px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
+    color: white;
+    text-align: center;
+}
+
+/* Product.html */
 
 .selectionText{
     text-align: center;
     font-size: 1.5em;
     margin-bottom:50px;
     margin-top: 60px;
-
 }
 
 .buttonContainer{
