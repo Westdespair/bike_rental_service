@@ -1,5 +1,5 @@
 :root{
-    --spacing: 20px;
+    --spacing: 40px;
 }
 
 .selectionText{
@@ -12,11 +12,10 @@
 .buttonContainer{
     display: grid;
     grid-template-columns: 20vw 20vw;
-    grid-template-rows: 13vw 13vw;
+    grid-template-rows: 12.5vw 12.5vw;
     justify-content: center;
     height: 30vw;
-    align-content: space-between;
-
+    align-content: space-evenly;
 
 
 }
@@ -24,83 +23,123 @@
 .bicycle-button-Yellow {
     cursor: pointer;
     background:  transparent url("../pictures/Bicycle/yellow.png") no-repeat top center;
-    background-size: contain;
+    background-size: cover;
 
     width: 20vw;
-    height: 15vw;
-    margin-right: var(--spacing);
+    height: 12.5vw;
 
-    border: 2px solid gray;
+    border: 2px solid #19900d;
     border-radius: 8px;
-    color: gray();
 
+    margin-right: var(--spacing);
 }
 
 .yellow{
-    margin-top: 180px;
-    font-size: 1.5em;
+    cursor: pointer;
+    width: 8vw;
+    height: 3vw;
+    background-color: #e3e008;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50vw;
+    text-align: center;
+    font-size: 1vw;
+    color: #FFF;
+
+
+    -ms-transform: translate(-100%, -100%);
+    transform: translate(70%, 200%);
 }
 
 .bicycle-button-Brown{
     cursor: pointer;
     background:  transparent url("../pictures/Bicycle/brown.png") no-repeat top center;
-    background-size: contain;
-
-
-
+    background-size: cover;
 
     width: 20vw;
-    height: 15vw;
-    margin-left: var(--spacing);
+    height: 12.5vw;
 
-    border: 2px solid gray;
+    border: 2px solid #19900d;
     border-radius: 8px;
-    color: gray();
 
+    margin-left: var(--spacing);
 }
 
 .brown{
-    margin-top: 180px;
-    font-size: 1.5em;
+    cursor: pointer;
+    width: 8vw;
+    height: 3vw;
+    background-color: #5e4c00;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50vw;
+    text-align: center;
+    font-size: 1vw;
+    color: #FFF;
 
+
+    -ms-transform: translate(-100%, -100%);
+    transform: translate(70%, 200%);
 }
 
 .bicycle-button-Green{
     cursor: pointer;
     background:  transparent url("../pictures/Bicycle/green.png") no-repeat top center;
-    background-size: contain;
+    background-size: cover;
 
     width: 20vw;
-    height: 15vw;
-    margin-right: var(--spacing);
+    height: 12.5vw;
 
-    border: 2px solid gray;
+    border: 2px solid #19900d;
     border-radius: 8px;
-    color: gray();
 
-
+    margin-right: var(--spacing);
 }
 
 .green{
-    margin-top: 180px;
-    font-size: 1.5em;
+    cursor: pointer;
+    width: 8vw;
+    height: 3vw;
+    background-color: #19900d;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50vw;
+    text-align: center;
+    font-size: 1vw;
+    color: #FFF;
+
+
+    -ms-transform: translate(-100%, -100%);
+    transform: translate(70%, 200%);
 }
 
 .bicycle-button-AnyColor {
     cursor: pointer;
     background: transparent url("../pictures/Bicycle/any.png") no-repeat top center;
-    background-size: contain;
+    background-size: cover;
 
     width: 20vw;
-    height: 15vw;
-    margin-left: var(--spacing);
+    height: 12.5vw;
 
-    border: 2px solid gray;
+    border: 2px solid #19900d;
     border-radius: 8px;
-    color: gray();
+
+    margin-left: var(--spacing);
 }
 
 .anycolor{
-    margin-top: 180px;
-    font-size: 1.5em;
+    cursor: pointer;
+    width: 8vw;
+    height: 3vw;
+    background-color: #727272;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50vw;
+    text-align: center;
+    font-size: 1vw;
+    color: #FFF;
+
+
+    -ms-transform: translate(-100%, -100%);
+    transform: translate(70%, 200%);
 }
