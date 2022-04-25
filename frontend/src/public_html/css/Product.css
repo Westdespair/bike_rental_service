@@ -22,7 +22,7 @@
 
 .bicycle-button-Yellow {
     cursor: pointer;
-    background:  transparent url("../pictures/Bicycle/yellow.png") no-repeat top center;
+    background:  transparent url("../pictures/bicycle/yellow_bike.png") no-repeat top center;
     background-size: cover;
 
     width: 20vw;
@@ -53,7 +53,7 @@
 
 .bicycle-button-Brown{
     cursor: pointer;
-    background:  transparent url("../pictures/Bicycle/brown.png") no-repeat top center;
+    background:  transparent url("../pictures/bicycle/brown_bike.png") no-repeat top center;
     background-size: cover;
 
     width: 20vw;
@@ -84,7 +84,7 @@
 
 .bicycle-button-Green{
     cursor: pointer;
-    background:  transparent url("../pictures/Bicycle/green.png") no-repeat top center;
+    background:  transparent url("../pictures/bicycle/green_bike.png") no-repeat top center;
     background-size: cover;
 
     width: 20vw;
@@ -115,7 +115,7 @@
 
 .bicycle-button-AnyColor {
     cursor: pointer;
-    background: transparent url("../pictures/Bicycle/any.png") no-repeat top center;
+    background: transparent url("../pictures/bicycle/any_bike.png") no-repeat top center;
     background-size: cover;
 
     width: 20vw;
