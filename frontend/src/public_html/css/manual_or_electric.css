@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.text-field{
+    padding-top: 4vw;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.manual-or-electric{
+    padding-top: 4vw;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+
+}
+
+.electric{
+    height: 30vw;
+
+}
+
+.electric-p{
+    cursor: pointer;
+    width: 35vw;
+    border: 2px solid #19900d;
+    border-radius: 8px;
+}
+
+.electric-p:hover {
+    box-shadow: 0 0 10px 1px rgba(53, 255, 0, 0.5);
+}
+
+.caption2{
+    display: block;
+    text-align: center;
+    font-size: 2em;
+}
+
+.manual{
+    height: 30vw;
+}
+
+.manual-p{
+    cursor: pointer;
+    width: 35vw;
+    border: 2px solid #19900d;
+    border-radius: 8px;
+}
+
+.manual-p:hover {
+    box-shadow: 0 0 10px 1px rgba(53, 255, 0, 0.5);
+}
+
+.caption1{
+    display: block;
+    text-align: center;
+    font-size: 2em;
+}
+
+.or{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 2.2em;
+    margin-top: 8vw;
+}
