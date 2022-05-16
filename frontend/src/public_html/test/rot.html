@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport"   content="width=device-width, initial-scale=1"/>
 
-    <script type="application/javascript" src="scroll.js"></script>
+    <script type="application/javascript" src="../scroll.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./pictures/bicycle_icon_256x256.png" />
-    <link rel="stylesheet" href="./css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/manual_or_electric.css" type="text/css" />
+    <link rel="icon" type="image/png" href="../pictures/bicycle_icon_256x256.png" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <link rel="stylesheet" href="rot.css" type="text/css" />
 
     <title>Keep Rolling, Rolling, Rolling</title>
 
@@ -48,23 +48,49 @@
 
 <div class="header-bar"></div>
 
-<div class="text-field">Which type of bike would you like?</div>
+
+
+
+
+
+
 
 <div class="manual-or-electric">
-    <div class="manual">
-        <a href="product.html">
-            <img class="manual-p" src="pictures/bicycle/any_bike.png" alt="a picture of a manual bike">
-        </a>
+    <div class="toggle-wrapper">
+        <input type="checkbox" id="check" class="toggle">
+        <label for="check">
+            fjefewfbegerg
+            <!--
+            <img class="manual-p" src="../pictures/bicycle/any_bike.png" alt="a picture of a manual bike">
+            -->
+        </label>
+        </input>
         <span class="caption1">Manual</span>
     </div>
     <div class="or">or</div>
-    <div class="electric">
-        <a href="product.html">
-            <img class="electric-p" src="pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike">
-        </a>
+    <div class="toggle-wrapper">
+        <button id="aa">
+            <!--
+            <img class="electric-p" src="../pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike">
+            -->
+        </button>
         <span class="caption2">Electric</span>
     </div>
 </div>
+
+<script type="text/javascript">
+    $('.toggle-wrapper').on('click', function(e) {
+        $(this).find('.toggle-button').toggleClass("toggle-button-selected");
+        e.preventDefault();
+    });
+</script>
+
+
+
+
+
+
+
 
 
 <div class="footer-container">
@@ -98,7 +124,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 </html>

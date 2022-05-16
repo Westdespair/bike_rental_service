@@ -4,6 +4,7 @@
     padding-top: 4vw;
     text-align: center;
     font-size: 2.5em;
+    color: #2c2c2c;
 }
 
 .manual-or-electric{
@@ -14,10 +15,6 @@
 
 }
 
-.electric{
-    height: 30vw;
-
-}
 
 .electric-p{
     cursor: pointer;
@@ -34,9 +31,10 @@
     display: block;
     text-align: center;
     font-size: 2em;
+    color: #2c2c2c;
 }
 
-.manual{
+.toggle-wrapper{
     height: 30vw;
 }
 
@@ -55,6 +53,7 @@
     display: block;
     text-align: center;
     font-size: 2em;
+    color: #2c2c2c;
 }
 
 .or{
@@ -62,4 +61,31 @@
     padding-right: 2vw;
     font-size: 2.2em;
     margin-top: 8vw;
+    color: #2c2c2c;
+}
+
+
+
+#bb{
+    border: none;
+}
+
+#aa{
+    border: none;
+}
+
+input[type="checkbox"].toggle{
+    opacity: 0;
+}
+
+input[type="checkbox"].toggle + label:before {
+
+}
+
+input[type="checkbox"].toggle + label:after{
+    
+}
+
+input[type="checkbox"].toggle:checked + label{
+    color: red;
 }
