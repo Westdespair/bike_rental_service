@@ -63,29 +63,3 @@
     margin-top: 8vw;
     color: #2c2c2c;
 }
-
-
-
-#bb{
-    border: none;
-}
-
-#aa{
-    border: none;
-}
-
-input[type="checkbox"].toggle{
-    opacity: 0;
-}
-
-input[type="checkbox"].toggle + label:before {
-
-}
-
-input[type="checkbox"].toggle + label:after{
-    
-}
-
-input[type="checkbox"].toggle:checked + label{
-    color: red;
-}
