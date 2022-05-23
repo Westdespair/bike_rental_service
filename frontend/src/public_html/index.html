@@ -15,31 +15,10 @@
     <header class="header">
 
         <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
-
-        <!-------------------------------------------------->
-
-        <div class="header-buttons">
-            <button type="button" class="search-button" onclick="">
-
-            </button>
-
-            <div class="container" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+        <div class="search-container">
+            <button type="button" class="login-button" onclick="location.href='index.html'"></button>
+            <p class="login-text">Login/My page</p>
         </div>
-        <!--
-            <div class="dropdown">
-            <div class="dropdown-content">
-                <a href="#">Home</a>
-                <a href="#">Find a bike</a>
-                <a href="#">Contact us</a>
-                <a href="#">About us</a>
-
-            </div>
-        </div>-->
-
     </header>
 
 
@@ -58,6 +37,7 @@
 
 <div class="smaller-body">
 
+    <div class="mid-container">
 
     <div class="slogan">
         <div class="slogan-text">
@@ -67,25 +47,30 @@
 
     <div class="text-section">
         <div class="text-body1">
-            <button type="button" class="text-button" onclick=""></button>
-            Our service makes it fast and easy to rent a bike in seconds and leave it at any place convenient to
-            you. We clean up after you - our service-guys pick up all the bikes within 2 hours.
+            <img id="p-view" src="./pictures/hero_images/sunny_road_biker_daytime_1280x719.jpg" alt="p">
+            <div class="text-field text-hide"><p>Our service makes it fast and easy to rent a bike in seconds and leave it at any place convenient to
+                you. We clean up after you - our service-guys pick up all the bikes within 2 hours.</p>
+            </div>
         </div>
         <div class="text-body1">
-            <button type="button" class="text-button2" onclick=""></button>
-                We have 120 bikes available in Ålesund. New bikes upgraded every month according to latest trends. 20
-                brand new electric bikes waiting for you!
+            <img id="p-view2" src="./pictures/hero_images/fjellstua_view_daytime_1280x719.jpg" alt="p">
+            <div class="text-field text-hide"><p>We have 120 bikes available in Ålesund. New bikes upgraded every month according to latest trends. 20
+                brand new electric bikes waiting for you!</p>
+            </div>
         </div>
         <div class="text-body1">
-            <button type="button" class="text-button3" onclick=""></button>
-                We are true to the BYOWT concept: Bring Your Own Winter Tires! Nothing brings a warm home feeling better
-                than BYOWT!
+            <img id="p-view3" src="./pictures/hero_images/mountainbike_snow_mountain_1280x719.jpg" alt="p">
+            <div class="text-field text-hide">
+                <p>We are true to the BYOWT concept: Bring Your Own Winter Tires! Nothing brings a warm home feeling better
+                than BYOWT!</p>
+            </div>
+
         </div>
     </div>
 
 <div class="testimonials-wrapper" >
 
-    <div class=" testimonials-container">
+    <div class="testimonials-container">
         <img src="pictures/persons/serioussam.jpg" alt="Avatar" style="width:90px">
         <p><span>Serious Sam</span></p>
         <p>"I don't understand the hype around personalization.
@@ -96,7 +81,7 @@
     </div>
 
 
-    <div class=" testimonials-container">
+    <div class="testimonials-container p1">
         <img src="pictures/persons/lohnjennon.jpg" alt="Avatar" style="width:90px">
         <p><span>Lohn Jennon</span></p>
         <p>"You can just hit the pedals and be free. Imagine there's no heaven!
@@ -104,7 +89,7 @@
             What can be better than that?"</p>
     </div>
 
-    <div class=" testimonials-container">
+    <div class="testimonials-container p2">
         <img src="pictures/persons/lisabeatle.jpg" alt="Avatar" style="width:90px">
         <p><span>Lisa Beatle</span></p>
         <p>"I like the option to personalize the bike with non-permanent colors.
@@ -113,10 +98,10 @@
         </p>
     </div>
 </div>
-</div>
 
+    </div>
 
-
+<footer>
     <div class="footer-container">
         <div class="footer">
             <div class="footer-heading footer-1">
@@ -148,7 +133,7 @@
             </div>
         </div>
     </div>
-
-
+</footer>
+    </div>
 </body>
 </html>
