@@ -39,13 +39,12 @@ html{
     background-color: rgba(0, 0, 0, 0.69);
     left: 55%;
     top: 50%;
-    width: 30vw;
-    height: 7vw;
+    width: 35vw;
+    height: 10vw;
     position: relative;
 
     border-radius: 15px;
 }
-
 
 .hero-button {
     align-items: center;
@@ -57,12 +56,12 @@ html{
     color: #ffffff;
     display: flex;
     font-family: Phantomsans, sans-serif;
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-weight: inherit;
     justify-content: center;
     line-height: 1em;
     max-width: 100%;
-    min-width: 7vw;
+    min-width: 1vw;
     padding: 1rem 6rem;
     text-decoration: none;
     user-select: none;
@@ -70,6 +69,8 @@ html{
     touch-action: manipulation;
     white-space: nowrap;
     cursor: pointer;
+    width: 31vw;
+    height: 6vw;
 
     margin: 0;
     position: absolute;
@@ -79,9 +80,17 @@ html{
     transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 600px){
-    .hero-button{
-        font-size: 2.5vw;
+@media only screen and (max-width: 550px){
+    .hero-button-background{
+        width: 0;
+        height: 0;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .hero button{
+        height: 7vw;
+        width: 20vw;
     }
 }
 
@@ -89,8 +98,6 @@ html{
 .hero-button:hover {
     outline: 0;
 }
-
-
 
 .hero-button span{
     cursor: pointer;
@@ -154,7 +161,7 @@ body {
 
 }
 
-.search-container{
+.login-container{
     position: center;
     margin-right: 30px;
 }
@@ -180,6 +187,19 @@ body {
     top: 60px;
 }
 
+@media only screen and (max-width: 500px){
+    .login-button{
+        background-size: 20px;
+    }
+    .login-text{
+        font-size: .5rem;
+        margin-left: 20px;
+        top: 50px;
+    }
+    .l
+}
+
+
 .mid-container{
     max-width: 1200px;
     margin: auto;
@@ -200,7 +220,7 @@ body {
     text-align: center;
     scale: initial;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 .text-section{
@@ -209,10 +229,14 @@ body {
     color: #2c2c2c;
     height: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: #ffffff;
     font-weight: bolder;
+}
+
+.text-field{
+    height: 10vw;
 }
 
 .text-body1{
@@ -220,21 +244,12 @@ body {
     margin: 1.5vw;
 }
 
-.text-field{
+
+.p-view{
+    width: 25vw;
+    border-radius: 20px;
 }
 
-#p-view{
-    width: 25vw;
-    border-radius: 20px;
-}
-#p-view2{
-    width: 25vw;
-    border-radius: 20px;
-}
-#p-view3{
-    width: 25vw;
-    border-radius: 20px;
-}
 
 @media only screen and (max-width: 1180px){
     .text-body1{
@@ -295,16 +310,18 @@ body {
     float: left;
     margin-right: 20px;
     border-radius: 50%;
+    width: 110px;
 }
 
 .testimonials-container span {
-    font-size: 2vw;
+    font-size: 1rem;
     margin-right: 15px;
 }
 
 @media (max-width: 500px) {
     .testimonials-container {
         text-align: center;
+        font-size: 0.7rem;
     }
 
 
@@ -312,10 +329,9 @@ body {
         margin: auto;
         float: none;
         display: block;
+        width: 2rem;
     }
 }
-
-
 
     .footer-container {
         display: block;
@@ -324,7 +340,6 @@ body {
         bottom: 0;
         width: 100%;
         background-color: rgb(44, 44, 44);
-        color: white;
         text-align: center;
     }
 
@@ -335,7 +350,7 @@ body {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-
+        margin-top: 3rem;
     }
 
     .footer-heading {
@@ -407,11 +422,7 @@ body {
         }
     }
 
-    @media screen and (max-width: 820px) {
-        .footer {
-            height: 2rem;
-        }
-    }
+
 
     @media screen and (max-width: 720px) {
         .footer-3 {
@@ -435,9 +446,20 @@ body {
 
     }
 
-    @media screen and (max-height: 800px) {
-        .footer-container{
-
+    @media screen and (max-width: 392px) {
+        .footer-email-form{
+            background-color: rgb(44, 44, 44);
+            margin-top: 0;
+            width: 100%;
+        }
+        .footer-1{
+            margin-right: 0;
+        }
+        .footer-2{
+            margin-right: 0;
+        }
+        .footer{
+            display: table;
         }
     }
 
