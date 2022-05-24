@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/all.min.css");
 
 .text-field{
     padding-top: 4vw;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 4vw;
     color: #2c2c2c;
 }
 
@@ -16,50 +17,173 @@
 }
 
 
-.electric-p{
+.picture{
     cursor: pointer;
     width: 35vw;
     border: 2px solid #19900d;
     border-radius: 8px;
 }
 
-.electric-p:hover {
+.picture:hover {
     box-shadow: 0 0 10px 1px rgba(53, 255, 0, 0.5);
-}
-
-.caption2{
-    display: block;
-    text-align: center;
-    font-size: 2em;
-    color: #2c2c2c;
 }
 
 .toggle-wrapper{
     height: 30vw;
 }
 
-.manual-p{
-    cursor: pointer;
-    width: 35vw;
-    border: 2px solid #19900d;
-    border-radius: 8px;
-}
-
-.manual-p:hover {
-    box-shadow: 0 0 10px 1px rgba(53, 255, 0, 0.5);
-}
-
-.caption1{
+.caption{
     display: block;
     text-align: center;
-    font-size: 2em;
+    font-size: 3vw;
     color: #2c2c2c;
 }
 
 .or{
     padding-left: 2vw;
     padding-right: 2vw;
-    font-size: 2.2em;
+    font-size: 3vw;
     margin-top: 8vw;
     color: #2c2c2c;
 }
+
+@media only screen and (max-width: 500px){
+    .picture{
+        width: 40vw;
+    }
+}
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    --transition: 0.15s;
+    --border-radius: 0.5rem;
+    --background: #00ff00;
+    --box-shadow: #00ff00;
+}
+
+.cont-bg {
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cont-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.cont-checkbox {
+    width: 40vw;
+    height: 25vw;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    background: white;
+    transition: transform var(--transition);
+}
+
+.cont-checkbox:first-of-type {
+    margin-bottom: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.cont-checkbox:active {
+    transform: scale(0.9);
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    opacity: 1;
+    box-shadow: 0 0 0 3px var(--background);
+}
+
+input:checked + label img {
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+}
+
+input:checked + label .cover-checkbox {
+    opacity: 1;
+    transform: scale(1);
+}
+
+input:checked + label .cover-checkbox svg {
+    stroke-dashoffset: 0;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0.6;
+}
+
+label img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+label .cover-checkbox {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--box-shadow);
+    border: 2px solid #fff;
+    transition: transform var(--transition),
+    opacity calc(var(--transition) * 1.2) linear;
+    opacity: 0;
+    transform: scale(0);
+}
+
+label .cover-checkbox svg {
+    width: 13px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: top;
+    fill: none;
+    margin: 5px 0 0 3px;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    transition: stroke-dashoffset 0.4s ease var(--transition);
+    stroke-dashoffset: 16px;
+}
+
+label .info {
+    text-align: center;
+
+}
+

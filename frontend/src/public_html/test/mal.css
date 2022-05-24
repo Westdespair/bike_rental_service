@@ -84,18 +84,6 @@ smallerBody{
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
-.search-button{
-    cursor: pointer;
-    border: 1px solid transparent;
-    height: 35px;
-    width: 35px;
-    color: #000000;
-    background: transparent url("../pictures/looking_glass_icon_96x96.png") no-repeat center center;
-    background-size: 35px;
-    box-shadow: transparent;
-    margin-right: 20px;
-
-}
 
 .header-buttons{
     margin-right: 20px;

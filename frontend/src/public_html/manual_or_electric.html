@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
     <link rel="stylesheet" href="css/manual_or_electric.css" type="text/css" />
 
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/all.min.css"/>
+
     <title>Keep Rolling, Rolling, Rolling</title>
 
 </head>
@@ -28,20 +30,57 @@
 <div class="header-bar"></div>
 
 <div class="text-field">Which type of bike would you like?</div>
-
+<!--
 <div class="manual-or-electric">
     <div class="manual">
         <a href="product.html">
-            <img class="manual-p" src="pictures/bicycle/any_bike.png" alt="a picture of a manual bike">
+            <img class="picture manual-p" src="pictures/bicycle/any_bike.png" alt="a picture of a manual bike">
         </a>
-        <span class="caption1">Manual</span>
+        <span class="caption">Manual</span>
     </div>
     <div class="or">or</div>
     <div class="electric">
-        <a href="product.html">
-            <img class="electric-p" src="pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike">
-        </a>
-        <span class="caption2">Electric</span>
+        <input type="checkbox">
+            <img class="picture electric-p" src="pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike">
+        </input>
+        <span class="caption">Electric</span>
+    </div>
+</div>
+-->
+<div class="cont-bg">
+    <div class="cont-title">Radio</div>
+    <div class="cont-main">
+        <div class="cont-checkbox">
+            <input type="radio" name="myRadio" id="myRadio-1" />
+            <label for="myRadio-1">
+                <img
+                        src="pictures/bicycle/any_bike.png" alt="a picture of a manual bike"
+                />
+                <span class="cover-checkbox">
+          <svg viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg>
+        </span>
+                <div class="info">Manual</div>
+            </label>
+        </div>
+
+        <div class="or">or</div>
+
+        <div class="cont-checkbox">
+            <input type="radio" name="myRadio" id="myRadio-2" />
+            <label for="myRadio-2">
+                <img
+                        src="pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike"
+                />
+                <span class="cover-checkbox">
+          <svg viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg>
+        </span>
+                <div class="info">Electric</div>
+            </label>
+        </div>
     </div>
 </div>
 
