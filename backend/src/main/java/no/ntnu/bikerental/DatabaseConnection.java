@@ -13,11 +13,11 @@ public class DatabaseConnection {
         try {
             Class.forName("org.sqlite.JDBC");
             //Connects with the Keep Rolling Rolling Rolling database file in resources.
-            connection = DriverManager.getConnection("jdbc:sqlite:Bike-rental-service/backend/src/main/resources/KRRR_database.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:backend/src/main/resources/KRRR_database.db");
             System.out.println("Connection success!");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-            System.out.println("Connection failed");
+            System.out.println("Connection to database failed.");
         }
         return connection;
     }
