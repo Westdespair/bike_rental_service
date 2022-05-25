@@ -88,6 +88,11 @@ public class Customer {
     public void setPrivilege(int privilege) {
         this.privilege = privilege;
     }
+
+    @JsonIgnore
+    public boolean isValid() {
+        return !"".equals(customerName);
+    }
 }
 
 
