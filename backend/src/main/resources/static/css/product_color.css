@@ -1,62 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/all.min.css");
 
-.text-field{
+
+.selectionText{
     padding-top: 4vw;
     text-align: center;
     font-size: 4vw;
     color: #2c2c2c;
 }
-
-.manual-or-electric{
-    padding-top: 4vw;
-    display: flex;
-    justify-content: center;
-    align-content: space-around;
-
-}
-
-
-.picture{
-    cursor: pointer;
-    width: 35vw;
-    border: 2px solid #19900d;
-    border-radius: 8px;
-}
-
-.picture:hover {
-    box-shadow: 0 0 10px 1px rgba(53, 255, 0, 0.5);
-}
-
-.toggle-wrapper{
-    height: 30vw;
-}
-
-.caption{
-    display: block;
-    text-align: center;
-    font-size: 3vw;
-    color: #2c2c2c;
-}
-
-.or{
-    padding-left: 2vw;
-    padding-right: 2vw;
-    font-size: 3vw;
-    margin-top: 8vw;
-    color: #2c2c2c;
-}
-
-@media only screen and (max-width: 500px){
-    .picture{
-        width: 40vw;
-    }
-}
-
-
-
-
-
 
 * {
     margin: 0;
@@ -68,7 +17,6 @@
 }
 
 .cont-bg {
-
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -91,17 +39,21 @@
 }
 
 .cont-checkbox {
+    margin-left: 2vw;
+    margin-right: 2vw;
     width: 40vw;
     height: 25vw;
     border-radius: var(--border-radius);
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     background: white;
     transition: transform var(--transition);
+
+    max-width: 40em;
 }
 
 .cont-checkbox:first-of-type {
     margin-bottom: 0.75rem;
-    margin-right: 0.75rem;
+
 }
 
 .cont-checkbox:active {
@@ -131,30 +83,30 @@ input:checked + label .cover-checkbox svg {
     stroke-dashoffset: 0;
 }
 
-label {
+.radio-label {
     display: inline-block;
     cursor: pointer;
     border-radius: var(--border-radius);
-    overflow: hidden;
+    overflow: initial;
     width: 100%;
     height: 100%;
     position: relative;
     opacity: 0.6;
 }
 
-label img {
+.radio-label img {
+    border-radius: var(--border-radius);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(30%);
+    filter: grayscale(30%);
 }
 
-label .cover-checkbox {
+.radio-label .cover-checkbox {
     position: absolute;
     right: 5px;
-    top: 3px;
-    z-index: 1;
+    top: 5px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -166,13 +118,13 @@ label .cover-checkbox {
     transform: scale(0);
 }
 
-label .cover-checkbox svg {
+.radio-label .cover-checkbox svg {
     width: 13px;
     height: 11px;
     display: inline-block;
     vertical-align: top;
     fill: none;
-    margin: 5px 0 0 3px;
+    margin: 2px 0 0 3px;
     stroke: #fff;
     stroke-width: 2;
     stroke-linecap: round;
@@ -182,8 +134,55 @@ label .cover-checkbox svg {
     stroke-dashoffset: 16px;
 }
 
-label .info {
+.info {
+    position: absolute;
     text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+
+    -ms-transform: translate(-350%, 850%);
+    transform: translate(-350%, 840%);
+}
+
+
+@media only screen and (max-width: 400px){
 
 }
 
+.button-container{
+    margin-top: 4vw;
+    margin-bottom: 12vw;
+
+    -ms-transform: translate(80%, 0%);
+    transform: translate(80%, 0%);
+}
+
+.next-button{
+    align-items: center;
+    background-image: linear-gradient(144deg,#19900d, #3be538 50%,#00DDEB);
+    border: 0;
+    border-radius: 1vw;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 2.5vw;
+    font-weight: inherit;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 1vw;
+    padding: 1vw 6vw;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    width: 8vw;
+    height: 5vw;
+
+
+    margin: 0;
+}

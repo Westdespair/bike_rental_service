@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport"   content="width=device-width, initial-scale=1"/>
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./pictures/bicycle_icon_256x256.png" />
-    <link rel="stylesheet" href="./css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/manual_or_electric.css" type="text/css" />
+    <link rel="icon" type="image/png" href="../../static/pictures/bicycle_icon_256x256.png" />
+    <link rel="stylesheet" href="../../static/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/css/product_color.css" type="text/css" />
 
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/all.min.css"/>
 
     <title>Keep Rolling, Rolling, Rolling</title>
 
@@ -29,59 +27,78 @@
 
 <div class="header-bar"></div>
 
-<div class="text-field">Which type of bike would you like?</div>
-<!--
-<div class="manual-or-electric">
-    <div class="manual">
-        <a href="product.html">
-            <img class="picture manual-p" src="pictures/bicycle/any_bike.png" alt="a picture of a manual bike">
-        </a>
-        <span class="caption">Manual</span>
-    </div>
-    <div class="or">or</div>
-    <div class="electric">
-        <input type="checkbox">
-            <img class="picture electric-p" src="pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike">
-        </input>
-        <span class="caption">Electric</span>
-    </div>
-</div>
--->
+
+<div class="selectionText">Which bike colour would you like?</div>
+
+
 <div class="cont-bg">
-    <div class="cont-title">Radio</div>
     <div class="cont-main">
         <div class="cont-checkbox">
             <input type="radio" name="myRadio" id="myRadio-1" />
-            <label for="myRadio-1">
+            <label class="radio-label" for="myRadio-1">
                 <img
-                        src="pictures/bicycle/any_bike.png" alt="a picture of a manual bike"
+                        src="../../static/pictures/bicycle/yellow_bike.png" alt="a picture of a manual bike"
                 />
                 <span class="cover-checkbox">
           <svg viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
           </svg>
         </span>
-                <div class="info">Manual</div>
+                <span class="info">Yellow</span>
             </label>
         </div>
-
-        <div class="or">or</div>
 
         <div class="cont-checkbox">
             <input type="radio" name="myRadio" id="myRadio-2" />
-            <label for="myRadio-2">
+            <label class="radio-label" for="myRadio-2">
                 <img
-                        src="pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike"
+                        src="../../static/pictures/bicycle/brown_bike.png" alt="a picture of a manual bike"
                 />
                 <span class="cover-checkbox">
           <svg viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
           </svg>
         </span>
-                <div class="info">Electric</div>
+                <span class="info">Brown</span>
+            </label>
+        </div>
+
+        <div class="cont-checkbox">
+            <input type="radio" name="myRadio" id="myRadio-3" />
+            <label class="radio-label" for="myRadio-3">
+                <img
+                        src="../../static/pictures/bicycle/green_bike.png" alt="a picture of a manual bike"
+                />
+                <span class="cover-checkbox">
+          <svg viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg>
+        </span>
+                <span class="info">Green</span>
+            </label>
+        </div>
+
+        <div class="cont-checkbox">
+            <input type="radio" name="myRadio" id="myRadio-4" />
+            <label class="radio-label" for="myRadio-4">
+                <img
+                        src="../../static/pictures/bicycle/any_bike.png" alt="a picture of an electric bike"
+                />
+                <span class="cover-checkbox">
+          <svg viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg>
+        </span>
+                <span class="info">Any color</span>
             </label>
         </div>
     </div>
+</div>
+
+<div class="button-container">
+    <button type="button" class="next-button" onclick="location.href='product.html'">
+        <span>Next</span>
+    </button>
 </div>
 
 
@@ -111,7 +128,7 @@
         </div>
         <div class="footer-email-form">
             <h2>Join our newsletter</h2>
-            <input type="email" placeholder="Enter your email address" id="footer-email">
+            <label for="footer-email"></label><input type="email" placeholder="Enter your email address" id="footer-email">
             <button type="submit" value="Sign Up" id="footer-email-btn">Sign Up</button>
         </div>
     </div>

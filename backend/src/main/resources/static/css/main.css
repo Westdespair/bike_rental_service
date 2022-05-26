@@ -220,7 +220,25 @@ body {
     text-align: center;
     scale: initial;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 3em;
+}
+
+@media (max-width: 1200px) {
+    .slogan-text {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 600px) {
+    .slogan-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .slogan-text {
+        font-size: .6em;
+    }
 }
 
 .text-section{
@@ -233,6 +251,7 @@ body {
     align-items: center;
     background-color: #ffffff;
     font-weight: bolder;
+    font-size: 1em;
 }
 
 .text-field{
@@ -287,7 +306,12 @@ body {
     background-color: #00ff00;
     border-radius: 100px;
     padding: 20px;
-    margin: 15px 0;
+    margin: 15px auto;
+    width: 60vw;
+}
+
+.testimonials-container p{
+    font-size: 1em;
 }
 
 .p1 {
@@ -308,20 +332,21 @@ body {
 
 .testimonials-container img {
     float: left;
-    margin-right: 20px;
+    margin-right: 2vw;
     border-radius: 50%;
-    width: 110px;
+    width: 7vw;
 }
 
 .testimonials-container span {
-    font-size: 1rem;
+    font-size: 2em;
     margin-right: 15px;
+
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
     .testimonials-container {
         text-align: center;
-        font-size: 0.7rem;
+
     }
 
 
@@ -329,7 +354,7 @@ body {
         margin: auto;
         float: none;
         display: block;
-        width: 2rem;
+        width: 2vw;
     }
 }
 
@@ -350,24 +375,26 @@ body {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 3rem;
+        margin-top: 3em;
     }
 
     .footer-heading {
-        margin-top: 2rem;
+        margin-top: 2em;
         display: flex;
         flex-direction: column;
         margin-right: 4rem;
     }
 
     .footer-heading h2 {
-        margin-bottom: 2rem;
+        margin-bottom: 2vw;
+        font-size: 1.5em;
     }
 
     .footer-heading a {
         color: white;
         text-decoration: none;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5vw;
+        font-size: 1em;
     }
 
     .footer-heading a:hover {
@@ -375,19 +402,25 @@ body {
         transition: 0.3s ease-out;
     }
 
+    .footer-email-form{
+        -ms-transform: translate(0%, -5%);
+        transform: translate(0%, -5%);
+    }
+
     .footer-email-form h2 {
-        margin-bottom: 2rem;
-        margin-top: 2rem;
+        margin-bottom: 1em;
+        margin-top: 4rem;
+        font-size: 1.5em;
     }
 
     #footer-email {
-        width: 250px;
-        height: 40px;
+        width: 22rem;
+        height: 3rem;
         border-radius: 4px;
         outline: none;
         border: none;
         padding-left: 0.5rem;
-        font-size: 1rem;
+        font-size: 1em;
         margin-bottom: 1rem;
     }
 
@@ -396,12 +429,12 @@ body {
     }
 
     #footer-email-btn {
-        width: 100px;
-        height: 40px;
+        width: 6rem;
+        height: 3rem;
         border-radius: 4px;
         background-color: #19900d;
         color: #fff;
-        font-size: 1rem;
+        font-size: 1.2em;
         border: none;
     }
 
@@ -416,23 +449,18 @@ body {
         .footer {
             height: 50vh;
         }
-
-        .footer-email-form {
-            margin-top: 4rem;
-        }
     }
 
-
+@media screen and (max-width: 1150px) {
+    .footer {
+        height: 50vh;
+    }
+}
 
     @media screen and (max-width: 720px) {
         .footer-3 {
             display: none;
         }
-
-        .footer-email-form {
-            margin-top: 4rem;
-        }
-
     }
 
     @media screen and (max-width: 500px) {

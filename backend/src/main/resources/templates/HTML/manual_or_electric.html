@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" type="image/png" href="../../static/pictures/bicycle_icon_256x256.png" />
+    <link rel="stylesheet" href="../../static/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/css/manual_or_electric.css" type="text/css" />
+
+    <title>Keep Rolling, Rolling, Rolling</title>
+
+</head>
+<body>
+
+
+
+<header class="header">
+
+    <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
+    <div class="login-container">
+        <button type="button" class="login-button" onclick="location.href='index.html'"></button>
+        <p class="login-text">Login/My page</p>
+    </div>
+</header>
+
+<div class="header-bar"></div>
+
+<div class="text-field">Which type of bike would you like?</div>
+
+
+<div class="cont-bg">
+    <div class="cont-main">
+        <div class="cont-checkbox">
+            <input type="radio" name="myRadio" id="myRadio-1" />
+            <label class="radio-label" for="myRadio-1">
+                <img
+                        src="../../static/pictures/bicycle/any_bike.png" alt="a picture of a manual bike"
+                />
+                <span class="cover-checkbox">
+          <svg viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg>
+        </span>
+                <span class="info">Manual</span>
+            </label>
+        </div>
+
+        <div class="or">or</div>
+
+        <div class="cont-checkbox">
+            <input type="radio" name="myRadio" id="myRadio-2" />
+            <label class="radio-label" for="myRadio-2">
+                <img
+                        src="../../static/pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike"
+                />
+                <span class="cover-checkbox">
+          <svg viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg>
+        </span>
+                <span class="info">Electric</span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="button-container">
+<button type="button" class="next-button" onclick="location.href='product_color.html'">
+    <span>Next</span>
+</button>
+</div>
+
+
+<div class="footer-container">
+    <div class="footer">
+        <div class="footer-heading footer-1">
+            <h2>About Us</h2>
+            <a href="#">Blog</a>
+            <a href="#">Demo</a>
+            <a href="#">Customers</a>
+            <a href="#">Investors</a>
+            <a href="#">Terms Of Service</a>
+        </div>
+        <div class="footer-heading footer-2">
+            <h2>Contact Us</h2>
+            <a href="#">Jobs</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+            <a href="#">Sponsorship</a>
+        </div>
+        <div class="footer-heading footer-3">
+            <h2>Social Media</h2>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Youtube</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="footer-email-form">
+            <h2>Join our newsletter</h2>
+            <label for="footer-email"></label><input type="email" placeholder="Enter your email address" id="footer-email">
+            <button type="submit" value="Sign Up" id="footer-email-btn">Sign Up</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
