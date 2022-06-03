@@ -1,0 +1,135 @@
+.footer-container {
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+}
+
+.footer {
+    height: 40vh;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+
+.footer-heading {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h2 {
+    margin-bottom: 2vw;
+    font-size: 1.5em;
+}
+
+.footer-heading a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5vw;
+    font-size: 1em;
+}
+
+.footer-heading a:hover {
+    color: #19900d;
+    transition: 0.3s ease-out;
+}
+
+.footer-email-form{
+    -ms-transform: translate(0%, -5%);
+    transform: translate(0%, -5%);
+}
+
+.footer-email-form h2 {
+    margin-bottom: 1em;
+    margin-top: 4rem;
+    font-size: 1.5em;
+}
+
+#footer-email {
+    width: 22rem;
+    height: 3rem;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding-left: 0.5rem;
+    font-size: 1em;
+    margin-bottom: 1rem;
+}
+
+#footer-email::placeholder {
+    color: #b1b1b1;
+}
+
+#footer-email-btn {
+    width: 6rem;
+    height: 3rem;
+    border-radius: 4px;
+    background-color: #19900d;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+}
+
+#footer-email-btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #19900d;
+    transition: all 0.4s ease-out;
+}
+
+@media screen and (max-width: 1150px) {
+    .footer {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .footer {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .footer-3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer-3 {
+        display: none;
+    }
+
+    .footer-email-form {
+        margin-top: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 392px) {
+    .footer-email-form{
+        background-color: rgb(44, 44, 44);
+        margin-top: 0;
+        width: 100%;
+    }
+    .footer-1{
+        margin-right: 0;
+    }
+    .footer-2{
+        margin-right: 0;
+    }
+    .footer{
+        display: table;
+    }
+    #footer-email {
+        width: 18rem;
+    }
+}

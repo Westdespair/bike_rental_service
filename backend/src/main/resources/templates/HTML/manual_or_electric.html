@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"   content="width=device-width, initial-scale=1"/>
 
     <link rel="icon" type="image/png" href="../../static/pictures/bicycle_icon_256x256.png" />
-    <link rel="stylesheet" href="../../static/css/main.css" type="text/css" />
     <link rel="stylesheet" href="../../static/css/manual_or_electric.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/css/header.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/footer.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/body-template.css" type="text/css"/>
+
+
 
     <title>Keep Rolling, Rolling, Rolling</title>
 
@@ -17,22 +22,26 @@
 
 <header class="header">
 
-    <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
+    <button type="button" class="header-logo" onclick="location.href='../index.html'"></button>
     <div class="login-container">
-        <button type="button" class="login-button" onclick="location.href='index.html'"></button>
+        <button type="button" class="login-button" onclick="location.href='#'"></button>
         <p class="login-text">Login/My page</p>
     </div>
 </header>
-
 <div class="header-bar"></div>
 
-<div class="text-field">Which type of bike would you like?</div>
+<div class="border-box">
+
+<div class="text-box">
+    <div class="text-field">Which type of bike would you like?</div>
+</div>
+
 
 
 <div class="cont-bg">
     <div class="cont-main">
         <div class="cont-checkbox">
-            <input type="radio" name="myRadio" id="myRadio-1" />
+            <input type="radio" name="myRadio" id="myRadio-1" class="radio-input"/>
             <label class="radio-label" for="myRadio-1">
                 <img
                         src="../../static/pictures/bicycle/any_bike.png" alt="a picture of a manual bike"
@@ -46,10 +55,8 @@
             </label>
         </div>
 
-        <div class="or">or</div>
-
-        <div class="cont-checkbox">
-            <input type="radio" name="myRadio" id="myRadio-2" />
+        <div class="cont-checkbox" id="cont-checkbox2">
+            <input type="radio" name="myRadio" id="myRadio-2" class="radio-input"/>
             <label class="radio-label" for="myRadio-2">
                 <img
                         src="../../static/pictures/bicycle/electric_bike.jpg" alt="a picture of an electric bike"
@@ -65,10 +72,14 @@
     </div>
 </div>
 
+
+
 <div class="button-container">
 <button type="button" class="next-button" onclick="location.href='product_color.html'">
     <span>Next</span>
 </button>
+</div>
+
 </div>
 
 

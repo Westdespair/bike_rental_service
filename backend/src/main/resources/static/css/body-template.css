@@ -1,0 +1,13 @@
+html{
+    height: 100%;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+body {
+    background-color: #ffffff;    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    max-width: 3600px;
+    margin: auto;
+    height: 100%;
+}

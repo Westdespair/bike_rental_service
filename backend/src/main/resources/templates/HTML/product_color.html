@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"   content="width=device-width, initial-scale=1"/>
 
     <link rel="icon" type="image/png" href="../../static/pictures/bicycle_icon_256x256.png" />
-    <link rel="stylesheet" href="../../static/css/main.css" type="text/css" />
     <link rel="stylesheet" href="../../static/css/product_color.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/css/header.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/footer.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/body-template.css" type="text/css"/>
+
 
 
     <title>Keep Rolling, Rolling, Rolling</title>
@@ -14,27 +17,27 @@
 </head>
 <body>
 
-
-
 <header class="header">
 
-    <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
+    <button type="button" class="header-logo" onclick="location.href='../index.html'"></button>
     <div class="login-container">
-        <button type="button" class="login-button" onclick="location.href='index.html'"></button>
+        <button type="button" class="login-button" onclick="location.href='#'"></button>
         <p class="login-text">Login/My page</p>
     </div>
 </header>
-
 <div class="header-bar"></div>
 
+<div class="border-box">
 
-<div class="selectionText">Which bike colour would you like?</div>
+    <div class="text-box">
+        <div class="text-field">Which bike colour would you like?</div>
+    </div>
 
 
 <div class="cont-bg">
     <div class="cont-main">
         <div class="cont-checkbox">
-            <input type="radio" name="myRadio" id="myRadio-1" />
+            <input type="radio" name="myRadio" id="myRadio-1" class="radio-input"/>
             <label class="radio-label" for="myRadio-1">
                 <img
                         src="../../static/pictures/bicycle/yellow_bike.png" alt="a picture of a manual bike"
@@ -49,7 +52,7 @@
         </div>
 
         <div class="cont-checkbox">
-            <input type="radio" name="myRadio" id="myRadio-2" />
+            <input type="radio" name="myRadio" id="myRadio-2" class="radio-input"/>
             <label class="radio-label" for="myRadio-2">
                 <img
                         src="../../static/pictures/bicycle/brown_bike.png" alt="a picture of a manual bike"
@@ -64,7 +67,7 @@
         </div>
 
         <div class="cont-checkbox">
-            <input type="radio" name="myRadio" id="myRadio-3" />
+            <input type="radio" name="myRadio" id="myRadio-3" class="radio-input"/>
             <label class="radio-label" for="myRadio-3">
                 <img
                         src="../../static/pictures/bicycle/green_bike.png" alt="a picture of a manual bike"
@@ -79,7 +82,7 @@
         </div>
 
         <div class="cont-checkbox">
-            <input type="radio" name="myRadio" id="myRadio-4" />
+            <input type="radio" name="myRadio" id="myRadio-4" class="radio-input"/>
             <label class="radio-label" for="myRadio-4">
                 <img
                         src="../../static/pictures/bicycle/any_bike.png" alt="a picture of an electric bike"
@@ -100,7 +103,7 @@
         <span>Next</span>
     </button>
 </div>
-
+</div>
 
 <div class="footer-container">
     <div class="footer">

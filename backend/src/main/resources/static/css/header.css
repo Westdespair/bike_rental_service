@@ -1,0 +1,58 @@
+
+.header{
+    max-width: 1200px;
+    height: 88px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.header-bar{
+    width: 100%;
+    height: 2px;
+    background-color: #151515;
+    position: relative;
+    margin-top: -2px;
+}
+
+.header-logo{
+    background: transparent url("../pictures/keeprollingrollingrolling_logo_200x200.jpg") no-repeat center center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    height: 84px;
+    width: 120px;
+    color: #000000;
+    background-size: cover;
+    box-shadow: transparent;
+    margin-left: 30px;
+
+}
+
+.login-container{
+    position: center;
+    margin-right: 30px;
+}
+
+.login-button{
+    cursor: pointer;
+    border: 1px solid transparent;
+    height: 50px;
+    width: 90px;
+    background: transparent url("../pictures/log_in_icon_128822.png") no-repeat center center;
+    background-size: 35px;
+    box-shadow: transparent;
+    position: center;
+    margin-bottom: 0;
+
+}
+
+.login-text{
+    font-size: .8em;
+    margin-left: 7px;
+    font-weight: bold;
+    position: absolute;
+    top: 60px;
+}
