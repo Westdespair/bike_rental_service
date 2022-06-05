@@ -9,5 +9,4 @@ public class BikerentalApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BikerentalApplication.class, args);
 	}
-
 }

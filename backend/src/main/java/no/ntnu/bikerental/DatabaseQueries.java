@@ -24,14 +24,12 @@ public class DatabaseQueries {
      */
     public ResultSet getSpecificAvailableBike(String colour, String type, boolean requiresHelmet) throws SQLException {
         System.out.println("Specific bike find: ");
-        String query = """
-                SELECT * FROM Bikes\s
-                LEFT JOIN Bike_Rentals\s
-                ON Bike_Rentals.bike_ID = Bikes.bike_ID
-                LEFT JOIN Bike_Types\s
-                ON Bikes.bike_type_ID = Bike_Types.bike_type_ID
-                 WHERE 
-                """;
+        String query = "SELECT * FROM Bikes " +
+                "LEFT JOIN Bike_Rentals " +
+                "ON Bike_Rentals.bike_ID = Bikes.bike_ID " +
+                "LEFT JOIN Bike_Types " +
+                "ON Bikes.bike_type_ID = Bike_Types.bike_type_ID " +
+                "WHERE ";
 
                 //Adds conditions to the middle of the query if they need to be filled.
                 if(!colour.isBlank()) {
@@ -47,11 +45,9 @@ public class DatabaseQueries {
                 }
 
                 query += addConditionalIfNeeded(query, "start_date IS NULL ", "AND ") +
-                        """
-                        OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now'))
-                        ORDER BY end_date DESC
-                        LIMIT 1
-                        """;
+                        "OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now')) " +
+                        "ORDER BY end_date DESC " +
+                        "LIMIT 1 ";
                 System.out.println(query);
        return statement.executeQuery(query);
     }
@@ -61,28 +57,23 @@ public class DatabaseQueries {
      * @throws SQLException
      */
     public String getAnyAvailableBike() throws SQLException {
-        ResultSet anyAvailableBike = statement.executeQuery("""
-                SELECT * FROM Bikes\s
-                LEFT JOIN Bike_Rentals\s
-                ON Bike_Rentals.bike_ID = Bikes.bike_ID
-                WHERE start_date IS NULL
-                OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now'))
-                ORDER BY end_date DESC
-                LIMIT 1
-                """);
+        ResultSet anyAvailableBike = statement.executeQuery("SELECT * FROM Bikes " +
+                "LEFT JOIN Bike_Rentals " +
+                "ON Bike_Rentals.bike_ID = Bikes.bike_ID " +
+                "WHERE start_date IS NULL " +
+                "OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now')) " +
+                "ORDER BY end_date DESC " +
+                "LIMIT 1 ");
         System.out.println(topResultAsString(anyAvailableBike, " "));
         return anyAvailableBike.getString("colour");
     }
 
     public int getAvailableBikeCount() throws SQLException {
-        ResultSet bikeCountQuery = statement.executeQuery("""
-                SELECT COUNT(Bikes.bike_ID) FROM Bikes\s
-                LEFT JOIN Bike_Rentals\s
-                on Bike_Rentals.bike_ID = Bikes.bike_ID
-                WHERE start_date IS NULL
-                OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now'))
-                """);
-
+        ResultSet bikeCountQuery = statement.executeQuery("SELECT COUNT(Bikes.bike_ID) FROM Bikes " +
+                "LEFT JOIN Bike_Rentals " +
+                "on Bike_Rentals.bike_ID = Bikes.bike_ID " +
+                "WHERE start_date IS NULL " +
+                "OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now'))");
         return bikeCountQuery.getInt(1);
     }
 
@@ -96,15 +87,14 @@ public class DatabaseQueries {
      */
     public int getSpecificBikeCount(String colour, String type, boolean requiresHelmet) throws SQLException {
         System.out.println("Attempting to find specific bike count");
-        String bikeCountQuery = """
-                SELECT COUNT(Bikes.bike_ID)\s
-                FROM Bikes
-                LEFT JOIN Bike_Rentals\s
-                ON Bike_Rentals.bike_ID = Bikes.bike_ID
-                LEFT JOIN Bike_Types\s
-                ON Bikes.bike_type_ID = Bike_Types.bike_type_ID
-                 WHERE 
-                """;
+        String bikeCountQuery = "SELECT COUNT(Bikes.bike_ID) " +
+                "FROM Bikes " +
+                "LEFT JOIN Bike_Rentals " +
+                "ON Bike_Rentals.bike_ID = Bikes.bike_ID " +
+                "LEFT JOIN Bike_Types " +
+                "ON Bikes.bike_type_ID = Bike_Types.bike_type_ID " +
+                " WHERE ";
+
         if(!colour.isBlank()) {
             bikeCountQuery += addConditionalIfNeeded(bikeCountQuery,"colour = '" + colour + "' " ,"AND ");
         }
@@ -117,9 +107,8 @@ public class DatabaseQueries {
             bikeCountQuery += addConditionalIfNeeded(bikeCountQuery, "helmet_included = true ", "AND ");
         }
 
-        bikeCountQuery += addConditionalIfNeeded(bikeCountQuery, "start_date IS NULL", "AND ") + """
-                 OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now'))
-                """;
+        bikeCountQuery += addConditionalIfNeeded(bikeCountQuery, "start_date IS NULL", "AND ") +
+                " OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now'))";
 
         System.out.println(bikeCountQuery);
         return statement.executeQuery(bikeCountQuery).getInt(1);
