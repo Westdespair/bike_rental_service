@@ -1,18 +1,20 @@
-package no.ntnu.bikerental.Model;
+package no.ntnu.bikerental.model;
 
 public class BikeTypes {
 
     private int bikeTypeID;
     private String bikeTypeName;
-    private int pricePerMinut;
+    private int pricePerMinute;
     private int retrievalFree;
 
-    public BikeTypes(int bikeTypeID, String bikeTypeName, int pricePerMinut, int retrievalFree){
+    public BikeTypes(int bikeTypeID, String bikeTypeName, int pricePerMinute, int retrievalFree){
         this.bikeTypeID = bikeTypeID;
         this.bikeTypeName = bikeTypeName;
-        this.pricePerMinut = pricePerMinut;
+        this.pricePerMinute = pricePerMinute;
         this.retrievalFree = retrievalFree;
     }
+
+    public BikeTypes(){}
 
     public int getBikeTypeID() {
         return bikeTypeID;
@@ -31,11 +33,11 @@ public class BikeTypes {
     }
 
     public int getPricePerMinut() {
-        return pricePerMinut;
+        return pricePerMinute;
     }
 
-    public void setPricePerMinut(int pricePerMinut) {
-        this.pricePerMinut = pricePerMinut;
+    public void setPricePerMinute(int pricePerMinute) {
+        this.pricePerMinute = pricePerMinute;
     }
 
     public int getRetrievalFree() {

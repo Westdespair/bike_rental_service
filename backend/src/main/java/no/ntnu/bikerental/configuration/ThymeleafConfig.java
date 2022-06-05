@@ -1,3 +1,5 @@
+package no.ntnu.bikerental.configuration;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.thymeleaf.spring5.SpringTemplateEngine;
@@ -7,10 +9,10 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import java.nio.charset.StandardCharsets;
 
 /**
- * !TODO write documentation here
+ *
  */
 @Configuration
-public class ThymeleafTemplateConfig {
+public class ThymeleafConfig {
 
     @Bean
     public SpringTemplateEngine springTemplateEngine() {

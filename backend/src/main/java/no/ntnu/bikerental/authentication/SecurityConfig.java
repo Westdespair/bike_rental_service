@@ -29,10 +29,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
     /**
      * Constructor with the parameter authenticationDetailsController
-     * @param authenticationDetailsController accessing the user service
+     * @param authenticationService accessing the user service
      */
-    public SecurityConfig(AuthenticationDetailsController authenticationDetailsController) {
-        this.userDetailsService = authenticationDetailsController;
+    public SecurityConfig(AuthenticationService authenticationService) {
+        this.userDetailsService = authenticationService;
     }
 
 

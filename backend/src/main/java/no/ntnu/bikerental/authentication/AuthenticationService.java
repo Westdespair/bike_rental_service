@@ -13,7 +13,7 @@ import java.util.Optional;
  * Provides AccessUserDetails needed for authentication
  */
 @Service
-public class AuthenticationServiceController implements UserDetailsService {
+public class AuthenticationService implements UserDetailsService {
 
     private CustomersRepository customersRepository;
 
@@ -21,7 +21,7 @@ public class AuthenticationServiceController implements UserDetailsService {
      * Constructor with the parameter customer repository
      * @param customersRepository customer repository
      */
-    public AccessUserService(CustomersRepository customersRepository) {
+    public AuthenticationService(CustomersRepository customersRepository) {
         this.customersRepository = customersRepository;
     }
 
@@ -35,7 +35,7 @@ public class AuthenticationServiceController implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Optional<Customers> customers = customersRepository.findByEmail(email);
         if (customers.isPresent()) {
-            return new AccessUserDetails(customers.get());
+            return new AuthenticationDetails(customers.get());
         } else {
             throw new UsernameNotFoundException("Customer " + email + " not found");
         }

@@ -2,31 +2,34 @@ package no.ntnu.bikerental.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Entity(name = "costumers")
 public class Customers {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
     private int customerID;
     private String customerName;
     private String email;
     private String address;
     private String locationName;
     private int postalNumber;
-    private int privilege;
+    private String password;
+    @Enumerated
+    private Role role;
 
 
-    public Customers(int customerID, String customerName, String email, String address, String locationName, int postalNumber, int privilege){
+
+    public Customers(int customerID, String customerName, String email, String address, String locationName, int postalNumber, String password, Role role){
         this.customerID = customerID;
         this.customerName = customerName;
         this.email = email;
         this.address = address;
         this.locationName = locationName;
         this.postalNumber = postalNumber;
-        this.privilege = privilege;
+        this.password = password;
+        this.role = role;
     }
 
     public Customers() {
@@ -57,8 +60,12 @@ public class Customers {
         return postalNumber;
     }
 
-    public int getPrivilege() {
-        return privilege;
+    public String getPassword() {
+        return password;
+    }
+
+    public Role getRole() {
+        return role;
     }
 
     public void setCustomerID(int customerID) {
@@ -85,13 +92,12 @@ public class Customers {
         this.postalNumber = postalNumber;
     }
 
-    public void setPrivilege(int privilege) {
-        this.privilege = privilege;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    @JsonIgnore
-    public boolean isValid() {
-        return !"".equals(customerName);
+    public void setRole(Role role) {
+        this.role = role;
     }
 }
 

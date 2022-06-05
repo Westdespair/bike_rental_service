@@ -1,6 +1,6 @@
 package no.ntnu.bikerental.service;
 
-import no.ntnu.bikerental.model.CustomerOrder;
+import no.ntnu.bikerental.model.Orders;
 import no.ntnu.bikerental.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,13 +18,13 @@ public class OrderService {
         this.orderRepository = orderRepository;
     }
 
-    public List<CustomerOrder> iterableToList(Iterable<CustomerOrder> iterable){
-        List<CustomerOrder> list = new LinkedList<>();
+    public List<Orders> iterableToList(Iterable<Orders> iterable){
+        List<Orders> list = new LinkedList<>();
         iterable.forEach(list::add);
         return list;
     }
 
-    public List<CustomerOrder> getAll(){
+    public List<Orders> getAll(){
         return iterableToList(orderRepository.findAll());
     }
 
