@@ -1,9 +1,9 @@
-package no.ntnu.bikerental.Service;
+package no.ntnu.bikerental.service;
 
-import no.ntnu.bikerental.Model.Product;
+import no.ntnu.bikerental.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import no.ntnu.bikerental.Repository.ProductRepository;
+import no.ntnu.bikerental.repository.ProductRepository;
 
 import java.util.List;
 import java.util.LinkedList;

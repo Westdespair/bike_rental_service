@@ -1,4 +1,4 @@
-package no.ntnu.bikerental.Model;
+package no.ntnu.bikerental.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

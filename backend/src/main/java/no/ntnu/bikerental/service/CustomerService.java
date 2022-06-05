@@ -1,8 +1,7 @@
-package no.ntnu.bikerental.Service;
+package no.ntnu.bikerental.service;
 
-import no.ntnu.bikerental.Model.Customer;
-import no.ntnu.bikerental.Repository.CustomerRepository;
-import no.ntnu.bikerental.Model.CustomerOrder;
+import no.ntnu.bikerental.model.Customer;
+import no.ntnu.bikerental.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

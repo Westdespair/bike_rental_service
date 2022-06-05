@@ -1,8 +1,6 @@
-package no.ntnu.bikerental.Model;
+package no.ntnu.bikerental.model;
 
 import javax.persistence.*;
-
-import no.ntnu.bikerental.Model.Product;
 
 @Entity
 public class CustomerOrder {

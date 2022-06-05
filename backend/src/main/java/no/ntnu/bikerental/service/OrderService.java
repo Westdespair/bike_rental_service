@@ -1,7 +1,7 @@
-package no.ntnu.bikerental.Service;
+package no.ntnu.bikerental.service;
 
-import no.ntnu.bikerental.Model.CustomerOrder;
-import no.ntnu.bikerental.Repository.OrderRepository;
+import no.ntnu.bikerental.model.CustomerOrder;
+import no.ntnu.bikerental.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

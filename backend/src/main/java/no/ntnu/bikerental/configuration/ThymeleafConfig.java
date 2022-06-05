@@ -1,30 +1,18 @@
 package no.ntnu.bikerental.configuration;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.thymeleaf.spring5.SpringTemplateEngine;
-import org.thymeleaf.templatemode.TemplateMode;
-import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
+import no.ntnu.bikerental.model.
+import no.ntnu.bikerental.model.
+import no.ntnu.bikerental.model.
+import no.ntnu.bikerental.service
+import no.ntnu.bikerental.service
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.parameters.P;
+import org.springframework.web.bind.annotation.*;
 
-import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 @Configuration
 public class ThymeleafConfig {
 
-    @Bean
-    public SpringTemplateEngine springTemplateEngine() {
-        SpringTemplateEngine springTemplateEngine = new SpringTemplateEngine();
-        springTemplateEngine.addTemplateResolver(emailTemplateResolver());
-        return springTemplateEngine;
-    }
-
-    public ClassLoaderTemplateResolver emailTemplateResolver() {
-        ClassLoaderTemplateResolver emailTemplateResolver = new ClassLoaderTemplateResolver();
-        emailTemplateResolver.setPrefix("/templates/");
-        emailTemplateResolver.setSuffix(".html");
-        emailTemplateResolver.setTemplateMode(TemplateMode.HTML);
-        emailTemplateResolver.setCharacterEncoding(StandardCharsets.UTF_8.name());
-        emailTemplateResolver.setCacheable(false);
-        return emailTemplateResolver;
-    }
 }
