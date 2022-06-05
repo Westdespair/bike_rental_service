@@ -1,34 +1,54 @@
 package no.ntnu.bikerental.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+/**
+ *
+ */
+@Entity(name = "products")
 public class Products {
-    @Id
-    @GeneratedValue
     private String productName;
     private String colour;
     private float productPrice;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
     private int productID;
     private String description;
     private String colourDuration;
-    private int locationID;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name= "locations", nullable = false)
+    private Locations locations;
     private String imagePath;
 
 
-    public Products(String productName, String colour, float productPrice, int productID, String colourDuration, int locationID, String description, String imagePath) {
+    /**
+     *
+     * @param productName
+     * @param colour
+     * @param productPrice
+     * @param productID
+     * @param colourDuration
+     * @param locations
+     * @param description
+     * @param imagePath
+     */
+    public Products(String productName, String colour, float productPrice, int productID, String colourDuration, Locations locations, String description, String imagePath) {
         this.productName = productName;
         this.colour = colour;
         this.productPrice = productPrice;
         this.productID = productID;
         this.colourDuration = colourDuration;
-        this.locationID = locationID;
+        this.locations = locations;
         this.description = description;
         this.imagePath = imagePath;
     }
 
+    /**
+     *
+     */
     public Products() {
 
     }
@@ -78,8 +98,8 @@ public class Products {
      *
      * @return
      */
-    public int getLocationID() {
-        return locationID;
+    public Locations getLocationID() {
+        return locations;
     }
 
     /**
@@ -140,10 +160,10 @@ public class Products {
 
     /**
      *
-     * @param locationID
+     * @param locations
      */
-    public void setLocationID(int locationID) {
-        this.locationID = locationID;
+    public void setLocationID(Locations locations) {
+        this.locations = locations;
     }
 
     /**

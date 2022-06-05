@@ -1,15 +1,21 @@
 package no.ntnu.bikerental.model;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+/**
+ *
+ */
+@Entity(name = "bikes")
 public class Bikes {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
     private int bikeID;
     private boolean helmetIncluded;
     private String colour;
 
-    @ManyToOne
-    @JoinColumn(name= "bikeTypeID")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name= "bikeTypeID", nullable = false)
     private BikeTypes bikeTypes;
 
     /**
@@ -24,6 +30,10 @@ public class Bikes {
         this.helmetIncluded = helmetIncluded;
         this.colour = colour;
         this.bikeTypes = bikeTypes;
+    }
+
+    public Bikes() {
+
     }
 
     /**

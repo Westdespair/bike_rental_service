@@ -1,14 +1,18 @@
 package no.ntnu.bikerental.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 
 @Entity
 public class Orders {
     @Id
     @GeneratedValue
     private int orderID;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name= "transactionID", nullable = false)
+    @JsonIgnore
     private int transactionID;
     private int productID;
     private int rentalID;

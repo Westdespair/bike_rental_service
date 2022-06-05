@@ -1,24 +1,26 @@
 package no.ntnu.bikerental.model;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
  *
  */
+@Entity(name = "bike-rentals")
 public class BikeRentals {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
     private int rentalID;
     private Date startDate;
     private Date endDate;
 
-    @ManyToOne
-    @JoinColumn(name= "locationID")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name= "locationID", nullable = false)
     private Locations locations;
 
-    @ManyToOne
-    @JoinColumn(name= "bikeID")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name= "bikeID", nullable = false)
     private Bikes bikes;
 
     /**

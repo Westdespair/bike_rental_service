@@ -1,30 +1,68 @@
 package no.ntnu.bikerental.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+
+/**
+ *
+ */
+@Entity(name = "transactions")
 public class Transactions{
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
     private int transactionID;
-    private int customerID;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "customerID", nullable = false)
+    private Customers customers;
 
 
-    public Transactions(int transactionID, int customerID){
+
+    /**
+     *
+     * @param customers
+     * @param transactionID
+     */
+    public Transactions(Customers customers, int transactionID) {
+        this.customers = customers;
         this.transactionID = transactionID;
-        this.customerID = customerID;
     }
 
+    public Transactions() {
+
+    }
+
+    /**
+     *
+     * @return
+     */
+    public Customers getCustomers() {
+        return customers;
+    }
+
+    /**
+     *
+     * @return
+     */
     public int getTransactionID() {
         return transactionID;
     }
 
-    public int getCustomerID() {
-        return customerID;
+    /**
+     *
+     * @param customers
+     */
+    public void setCustomers(Customers customers) {
+        this.customers = customers;
     }
 
+    /**
+     *
+     * @param transactionID
+     */
     public void setTransactionID(int transactionID) {
         this.transactionID = transactionID;
     }
-
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
-    }
-
 }

@@ -1,7 +1,5 @@
 package no.ntnu.bikerental.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 
 @Entity(name = "costumers")
