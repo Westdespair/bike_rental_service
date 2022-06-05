@@ -22,4 +22,14 @@ public class HomeController {
         return "index";
     }
 
+    /**
+     * Responds to HTTP get
+     * @return login successful for user
+     */
+    @GetMapping("/user")
+    public String getLoginSuccessUser() {
+
+        return "HTML/loginSuccessUser";
+    }
+
 }
