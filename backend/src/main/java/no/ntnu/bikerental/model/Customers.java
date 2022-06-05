@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Customer {
+public class Customers {
     @Id
     @GeneratedValue
     private int customerID;
@@ -19,7 +19,7 @@ public class Customer {
     private int privilege;
 
 
-    public Customer(int customerID, String customerName, String email, String address, String locationName, int postalNumber, int privilege){
+    public Customers(int customerID, String customerName, String email, String address, String locationName, int postalNumber, int privilege){
         this.customerID = customerID;
         this.customerName = customerName;
         this.email = email;
@@ -27,6 +27,10 @@ public class Customer {
         this.locationName = locationName;
         this.postalNumber = postalNumber;
         this.privilege = privilege;
+    }
+
+    public Customers() {
+
     }
 
     public int getCustomerID() {

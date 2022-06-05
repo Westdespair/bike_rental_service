@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Order {
+public class Orders {
     @Id
     @GeneratedValue
     private int orderID;
@@ -13,12 +13,17 @@ public class Order {
     private int productID;
     private int rentalID;
 
-    public Order(int orderID, int transactionID, int productID, int rentalID) {
+    public Orders(int orderID, int transactionID, int productID, int rentalID) {
         this.orderID = orderID;
         this.transactionID = transactionID;
         this.productID = productID;
         this.rentalID = rentalID;
     }
+
+    public Orders() {
+
+    }
+
 
     public int getOrderID() {
         return orderID;

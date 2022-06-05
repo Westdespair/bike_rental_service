@@ -1,6 +1,6 @@
 package no.ntnu.bikerental.service;
 
-import no.ntnu.bikerental.model.Product;
+import no.ntnu.bikerental.model.Products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import no.ntnu.bikerental.repository.ProductRepository;
@@ -18,15 +18,15 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<Product>  iterableToList(Iterable<Product> iterable){
-        List<Product> list = new LinkedList<>();
+    public List<Products>  iterableToList(Iterable<Products> iterable){
+        List<Products> list = new LinkedList<>();
         iterable.forEach(list::add);
         return list;
     }
 
-    public List<Product> getAllProducts(){return iterableToList(productRepository.findAll());}
+    public List<Products> getAllProducts(){return iterableToList(productRepository.findAll());}
 
-    public Product findOrderById(Integer id) {
+    public Products findOrderById(Integer id) {
         return productRepository.findById(id).orElse(null);
     }
 }

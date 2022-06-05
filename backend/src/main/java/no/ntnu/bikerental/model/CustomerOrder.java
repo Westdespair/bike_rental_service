@@ -13,13 +13,13 @@ public class CustomerOrder {
 
     @JoinColumn
     @Transient
-    private Customer customer;
+    private Customers customer;
 
     @Transient
-    private Product product;
+    private Products product;
 
 
-    public CustomerOrder(Customer customer, Product product){
+    public CustomerOrder(Customers customer, Products product){
         this.customer = customer;
         this.product = product;
     }
@@ -38,11 +38,11 @@ public class CustomerOrder {
         this.email = email;
     }
 
-    public Product getProduct(){
-        return product;
+    public Products getProduct(){
+        return products;
     }
 
-    public void setProduct(Product product) {
+    public void setProduct(Products products) {
         this.product = product;
     }
 

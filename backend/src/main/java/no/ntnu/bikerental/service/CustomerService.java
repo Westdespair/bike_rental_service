@@ -1,7 +1,7 @@
 package no.ntnu.bikerental.service;
 
 import no.ntnu.bikerental.model.Customer;
-import no.ntnu.bikerental.repository.CustomerRepository;
+import no.ntnu.bikerental.repository.CustomersRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,18 +10,18 @@ import java.util.Optional;
 @Service
 public class CustomerService {
 
-    private CustomerRepository customerRepository;
+    private CustomersRepository customersRepository;
 
-    public CustomerService(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
+    public CustomerService(CustomersRepository customersRepository) {
+        this.customersRepository = customersRepository;
     }
 
     public List<Customer> getAllCustomer() {
-        return (List<Customer>) customerRepository.findAll();
+        return (List<Customer>) customersRepository.findAll();
     }
 
     public Customer findCustomerById(long ID) {
-        Optional<Customer> customer = customerRepository.findById(ID);
+        Optional<Customer> customer = customersRepository.findById(ID);
         return customer.get();
 
     }

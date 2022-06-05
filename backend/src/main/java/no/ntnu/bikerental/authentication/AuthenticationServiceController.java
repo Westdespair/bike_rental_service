@@ -1,7 +1,7 @@
 package no.ntnu.bikerental.authentication;
 
-import no.ntnu.bicycle.model.Customer;
-import no.ntnu.bicycle.repository.CustomerRepository;
+import no.ntnu.bikerental.model.Customers;
+import no.ntnu.bikerental.repository.CustomersRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,16 +13,16 @@ import java.util.Optional;
  * Provides AccessUserDetails needed for authentication
  */
 @Service
-public class AuthenticationDetailsController implements UserDetailsService {
+public class AuthenticationServiceController implements UserDetailsService {
 
-    private CustomerRepository customerRepository;
+    private CustomersRepository customersRepository;
 
     /**
      * Constructor with the parameter customer repository
-     * @param customerRepository customer repository
+     * @param customersRepository customer repository
      */
-    public AccessUserService(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
+    public AccessUserService(CustomersRepository customersRepository) {
+        this.customersRepository = customersRepository;
     }
 
     /**
@@ -33,9 +33,9 @@ public class AuthenticationDetailsController implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        Optional<Customer> customer = customerRepository.findByEmail(email);
-        if (customer.isPresent()) {
-            return new AccessUserDetails(customer.get());
+        Optional<Customers> customers = customersRepository.findByEmail(email);
+        if (customers.isPresent()) {
+            return new AccessUserDetails(customers.get());
         } else {
             throw new UsernameNotFoundException("Customer " + email + " not found");
         }
