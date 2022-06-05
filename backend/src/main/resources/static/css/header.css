@@ -31,9 +31,22 @@
 
 }
 
-.login-container{
+.nav-bar{
     position: center;
     margin-right: 30px;
+    display: flex;
+}
+
+.shopping-cart{
+    cursor: pointer;
+    border: 1px solid transparent;
+    height: 50px;
+    width: 90px;
+    background: transparent url("../pictures/shopping_cart.png") no-repeat center center;
+    background-size: 35px;
+    box-shadow: transparent;
+    position: center;
+    margin-bottom: 0;
 }
 
 .login-button{
@@ -46,13 +59,12 @@
     box-shadow: transparent;
     position: center;
     margin-bottom: 0;
-
+    align-content: center;
 }
 
 .login-text{
     font-size: .8em;
-    margin-left: 7px;
     font-weight: bold;
-    position: absolute;
-    top: 60px;
+    padding-top-top: 1.1rem;
+    position: center;
 }

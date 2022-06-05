@@ -17,12 +17,12 @@
 </head>
 <body>
 
-<header class="header">
-
-    <button type="button" class="header-logo" onclick="location.href='../index.html'"></button>
-    <div class="login-container">
-        <button type="button" class="login-button" onclick="location.href='#'"></button>
-        <p class="login-text">Login/My page</p>
+<header class="header" th:fragment="header">
+    <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
+    <div class="nav-bar">
+        <button type="button" class="shopping-cart" onclick="location.href='#'"></button>
+        <button type="button" class="login-button" onclick="location.href='#'">
+        </button>
     </div>
 </header>
 <div class="header-bar"></div>
@@ -99,7 +99,7 @@
 </div>
 
 <div class="button-container">
-    <button type="button" class="next-button" onclick="location.href='product.html'">
+    <button type="button" class="next-button" onclick="location.href='product_choices.html'">
         <span>Next</span>
     </button>
 </div>

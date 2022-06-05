@@ -22,12 +22,15 @@
     height: 4rem;
     width: 42rem;
     border-radius: var(--border-radius);
+    box-shadow: 0 0.125rem 0.25rem var(--text);
+
 }
 
-.text-field{
+.text-field1{
     text-align: center;
     color: var(--text);
     font-size: 2.5rem;
+    background-color: transparent;
 }
 
 .cont-bg {
@@ -53,7 +56,7 @@
     margin: 1rem;
 
     border-radius: var(--border-radius);
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    box-shadow: 0 0.125rem 0.25rem var(--text);
     background: white;
     transition: transform var(--transition);
 }
@@ -193,6 +196,109 @@
     transform: scale(0.95);
 }
 
+
+.helmet-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+
+    box-shadow: 0 0.125rem 0.25rem var(--text);
+    background: white;
+    transition: transform var(--transition);
+    padding: 1rem;
+
+    border-radius: var(--border-radius);
+}
+
+.helmet-cont{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.helmet-p{
+    margin: auto;
+    height: 12rem;
+
+    border-radius: var(--border-radius);
+
+}
+
+.helmet-text{
+    color: var(--text);
+    background: var(--text-backround);
+    border-radius: var(--border-radius);
+    margin: auto 2rem;
+}
+
+/*//////////////////*/
+
+.helmet-checkbox{
+    margin: auto;
+
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+}
+
+.helmet-checkbox input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--background);
+}
+
+input:focus + .slider .helmet-p {
+    box-shadow: 0 0 1px var(--background);
+}
+
+input:checked + .slider:before {
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*//////////////////*/
+
 @media only screen and (max-width: 1200px){
     .cont-checkbox{
         width: 25rem;
@@ -223,7 +329,7 @@
         height: 2.7rem;
         width: 28rem;
     }
-    .text-field{
+    .text-field1{
         font-size: 1.7rem;
     }
     .cont-checkbox{
@@ -258,7 +364,7 @@
         height: 2rem;
         width: 22rem;
     }
-    .text-field{
+    .text-field1{
         font-size: 1.3rem;
     }
     .button-container {
@@ -274,7 +380,7 @@
         height: 1.7rem;
         width: 18.5rem;
     }
-    .text-field{
+    .text-field1{
         font-size: 1.1rem;
     }
     .cont-checkbox{

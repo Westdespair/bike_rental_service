@@ -20,20 +20,19 @@
 
 
 
-<header class="header">
-
-    <button type="button" class="header-logo" onclick="location.href='../index.html'"></button>
-    <div class="login-container">
-        <button type="button" class="login-button" onclick="location.href='#'"></button>
-        <p class="login-text">Login/My page</p>
+<header class="header" th:fragment="header">
+    <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
+    <div class="nav-bar">
+        <button type="button" class="shopping-cart" onclick="location.href='#'"></button>
+        <button type="button" class="login-button" onclick="location.href='#'">
+        </button>
     </div>
 </header>
-<div class="header-bar"></div>
 
 <div class="border-box">
 
 <div class="text-box">
-    <div class="text-field">Which type of bike would you like?</div>
+    <div class="text-field1">Which type of bike would you like?</div>
 </div>
 
 
@@ -72,6 +71,28 @@
     </div>
 </div>
 
+    <div class="text-box">
+        <div class="text-field1">Would you like a helmet?</div>
+    </div>
+
+    <div class="helmet-container">
+        <div class="helmet-cont">
+            <img class="helmet-p" src="../../static/pictures/products/helmet.jpg" alt="helmet for rental">
+
+            <div class="helmet-text">
+                Looks like a Borsalino vintage hat from outside
+                <br>
+                Carbon fibers inside
+                <br>
+                Keeps your pumpkin functional even after two hits against asphalt
+            </div>
+
+            <label class="helmet-checkbox">
+                <input type="checkbox"/>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
 
 
 <div class="button-container">

@@ -2,9 +2,8 @@
 
 .hero-img{
     top: 20px;
-    margin: auto;
     height: 50vw;
-
+    width: 100%;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../pictures/pexels_nubia/pexels_nubia_stretch_5184x2536.jpg');
     background-repeat: no-repeat;
@@ -13,7 +12,19 @@
     size: auto;
     position: relative;
     display: block;
+}
 
+@media only screen and (max-width: 900px){
+    .hero-img{
+        height: 30em;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .hero-img{
+        height: 25em;
+    }
 }
 
 .hero-button-background {
@@ -24,36 +35,25 @@
     height: 10vw;
     position: relative;
 
+    min-width: 20rem;
+    min-height: 6rem;
+
     border-radius: 15px;
 }
 
 .hero-button {
     align-items: center;
     background-image: linear-gradient(144deg,#19900d, #3be538 50%,#00DDEB);
-    border: 0;
     border-radius: 15px;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    box-sizing: border-box;
     color: #ffffff;
-    display: flex;
     font-family: Phantomsans, sans-serif;
-    font-size: 2.5vw;
-    font-weight: inherit;
-    justify-content: center;
-    line-height: 1em;
-    max-width: 100%;
-    min-width: 1vw;
-    padding: 1rem 6rem;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
     cursor: pointer;
+    border: none;
     width: 31vw;
     height: 6vw;
+    min-height: 4rem;
+    min-width: 17rem;
 
-    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,23 +61,46 @@
     transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 550px){
-
+.hero-text{
+    font-size: 2.5rem;
 }
+
+@media all and (max-width: 1600px){
+    .hero-text{
+        font-size: 2rem;
+    }
+}
+
+@media all and (max-width: 1200px){
+    .hero-text{
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (max-width: 900px){
+    .hero-button-background{
+        margin: auto;
+        left: 0;
+        top: 60%;
+    }
+    .hero-text{
+
+    }
+}
+
 
 @media only screen and (max-width: 550px){
     .hero-button-background{
-        width: 0;
-        height: 0;
+
     }
 }
 
 @media only screen and (max-width: 400px){
     .hero button{
-        height: 7vw;
-        width: 20vw;
+
     }
 }
+
 
 .hero-button:active,
 .hero-button:hover {
@@ -106,6 +129,7 @@
     right: 0;
 }
 
+
 .smaller-body{
     padding: 0;
     margin: auto;
@@ -121,7 +145,6 @@
         margin-left: 20px;
         top: 50px;
     }
-    .l
 }
 
 .mid-container{
@@ -158,11 +181,6 @@
     }
 }
 
-@media (max-width: 400px) {
-    .slogan-text {
-        font-size: .6em;
-    }
-}
 
 .text-section{
     margin-left: auto;
@@ -250,7 +268,7 @@
     border-radius: 100px;
     padding: 20px;
     margin: 15px auto;
-    width: 60vw;
+    width: 60rem;
 }
 
 .testimonials-container p{
@@ -277,7 +295,7 @@
     float: left;
     margin-right: 2vw;
     border-radius: 50%;
-    width: 7vw;
+    width: 7rem;
 }
 
 .testimonials-container span {
@@ -288,16 +306,28 @@
 
 @media (max-width: 1200px) {
     .testimonials-container {
-        text-align: center;
-
+        width: 90%;
     }
+}
 
+@media (max-width: 900px) {
+    .testimonials-container {
+        width: 98%;
+    }
+}
 
+@media (max-width: 600px) {
+    .testimonials-container {
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
     .testimonials-container img {
         margin: auto;
         float: none;
         display: block;
-        width: 2vw;
+
     }
 }
 

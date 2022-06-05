@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../../static/css/header.css" type="text/css"/>
     <link rel="stylesheet" href="../../static/css/footer.css" type="text/css"/>
     <link rel="stylesheet" href="../../static/css/body-template.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/product_choices.css" type="text/css"/>
+
 
 
     <title>Keep Rolling, Rolling, Rolling</title>
@@ -16,27 +18,25 @@
 </head>
 <body>
 
-<header class="header">
-
-    <button type="button" class="header-logo" onclick="location.href='../index.html'"></button>
-    <div class="login-container">
-        <button type="button" class="login-button" onclick="location.href='#'"></button>
-        <p class="login-text">Login/My page</p>
+<header class="header" th:fragment="header">
+    <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
+    <div class="nav-bar">
+        <button type="button" class="shopping-cart" onclick="location.href='#'"></button>
+        <button type="button" class="login-button" onclick="location.href='#'">
+        </button>
     </div>
 </header>
 <div class="header-bar"></div>
 
 
-////////
+<div class="text-box">
+    <div class="text-field">Anything extra?</div>
+</div>
 
 <div class="choices">
 
-    <div class="choice-helmet">
-
-    </div>
-
     <div class="choice-paint">
-
+        
     </div>
 
     <div class="choice-textile-bag">
@@ -44,8 +44,6 @@
     </div>
 
 </div>
-
-///////
 
 <div class="footer-container">
     <div class="footer">

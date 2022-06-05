@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="icon" type="image/png" href="../static/pictures/bicycle_icon_256x256.png"/>
     <link rel="stylesheet" href="../static/css/main.css" type="text/css"/>
@@ -16,11 +16,12 @@
 <body>
 
 
-<header class="header">
+<header class="header" th:fragment="header">
     <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
-    <div class="login-container">
-        <button type="button" class="login-button" onclick="location.href='index.html'"></button>
-        <p class="login-text">Login/My page</p>
+    <div class="nav-bar">
+        <button type="button" class="shopping-cart" onclick="location.href='#'"></button>
+        <button type="button" class="login-button" onclick="location.href='#'">
+        </button>
     </div>
 </header>
 <div class="header-bar"></div>
@@ -30,7 +31,7 @@
 <div class="hero-part">
     <div class="hero-img">
         <div class="hero-button-background">
-            <button type="button" class="hero-button" onclick="location.href='./HTML/manual_or_electric.html'"><span>Choose your companion</span>
+            <button type="button" class="hero-button" onclick="location.href='./HTML/manual_or_electric.html'"><span class="hero-text">Choose your companion</span>
             </button>
         </div>
     </div>
