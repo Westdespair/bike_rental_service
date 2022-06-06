@@ -7,12 +7,12 @@ import javax.persistence.*;
 /**
  *
  */
+@Entity
 public class Products {
     private String productName;
     private String colour;
     private float productPrice;
-
-
+    @Id
     private int productID;
     private String description;
     private String colourDuration;

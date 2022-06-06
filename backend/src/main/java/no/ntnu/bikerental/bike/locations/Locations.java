@@ -5,9 +5,9 @@ import javax.persistence.*;
 /**
  *
  */
-
+@Entity
 public class Locations {
-
+    @Id
     private int locationID;
     private int postalNumber;
     private String address;

@@ -1,11 +1,15 @@
 package no.ntnu.bikerental.bike;
 
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  *
  */
-
+@Entity
 public class Bikes {
+    @Id
     private int bikeID;
     private boolean helmetIncluded;
     private String colour;

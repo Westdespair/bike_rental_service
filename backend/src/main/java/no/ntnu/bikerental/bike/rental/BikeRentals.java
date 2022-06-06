@@ -1,12 +1,15 @@
 package no.ntnu.bikerental.bike.rental;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.sql.Date;
 
 /**
  *
  */
-
+@Entity
 public class BikeRentals {
+    @Id
     private int rentalID;
     private Date startDate;
     private Date endDate;

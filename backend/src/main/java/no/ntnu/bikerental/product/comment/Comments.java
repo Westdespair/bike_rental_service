@@ -6,16 +6,14 @@ import no.ntnu.bikerental.product.Products;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-
+@Entity
 public class Comments {
-
+    @Id
     private int commentID;
     private String content;
     private LocalDateTime postDate;
     private LocalDateTime editDate;
-
     private int customerID;
-
     private int productID;
 
 

@@ -1,13 +1,13 @@
 package no.ntnu.bikerental.authentication;
 
+import no.ntnu.bikerental.customer.CustomerService;
 import no.ntnu.bikerental.customer.Customers;
-import no.ntnu.bikerental.customer.CustomersRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+
 
 /**
  * Provides AccessUserDetails needed for authentication
@@ -15,15 +15,18 @@ import java.util.Optional;
 @Service
 public class AuthenticationService implements UserDetailsService {
 
-    private final CustomersRepository customersRepository;
+
+    private CustomerService customerService;
+
 
     /**
      * Constructor with the parameter customer repository
-     * @param customersRepository customer repository
+     * @param customerService customer repository
      */
-    public AuthenticationService(CustomersRepository customersRepository) {
-        this.customersRepository = customersRepository;
+    public AuthenticationService(CustomerService customerService) {
+        this.customerService = customerService;
     }
+
 
     /**
      * Loads user by username
@@ -31,13 +34,19 @@ public class AuthenticationService implements UserDetailsService {
      * @return user by username, otherwise throw an exception
      * @throws UsernameNotFoundException with customer email not found
      */
+
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        Optional<Customers> customers = customersRepository.findByEmail(email);
+        Customers customers = customerService.findCustomerByEmail(email);
+        return new AuthenticationDetails(customers);
+        /*
         if (customers.isPresent()) {
             return new AuthenticationDetails(customers.get());
         } else {
             throw new UsernameNotFoundException("Customer " + email + " not found");
         }
+
+
+         */
     }
 }

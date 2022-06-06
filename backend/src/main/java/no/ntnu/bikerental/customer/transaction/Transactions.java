@@ -7,8 +7,9 @@ import javax.persistence.*;
 /**
  *
  */
+@Entity
 public class Transactions {
-
+    @Id
     private int transactionID;
     private int customerID;
 

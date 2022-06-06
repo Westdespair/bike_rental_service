@@ -5,9 +5,9 @@ import javax.persistence.*;
 /**
  *
  */
-
+@Entity
 public class BikeTypes {
-
+    @Id
     private int bikeTypeID;
     private String bikeTypeName;
     private int pricePerMinute;

@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity(name = "customers")
 public class Customers {
-
+    @Id
     private int customerID;
     private String customerName;
     private String email;

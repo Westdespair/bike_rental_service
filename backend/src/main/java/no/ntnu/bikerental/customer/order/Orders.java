@@ -3,9 +3,9 @@ package no.ntnu.bikerental.customer.order;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-
+@Entity
 public class Orders {
-
+    @Id
     private int orderID;
     private int transactionID;
     private int productID;
