@@ -1,42 +1,32 @@
-package no.ntnu.bikerental.model;
+package no.ntnu.bikerental.bike.rental;
 
-import javax.persistence.*;
 import java.sql.Date;
 
 /**
  *
  */
-@Entity(name = "bike-rentals")
+
 public class BikeRentals {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
     private int rentalID;
     private Date startDate;
     private Date endDate;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name= "locationID", nullable = false)
-    private Locations locations;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name= "bikeID", nullable = false)
-    private Bikes bikes;
+    private int locationID;
+    private int bikeID;
 
     /**
      *
      * @param rentalID
      * @param startDate
      * @param endDate
-     * @param locations
-     * @param bikes
+     * @param locationID
+     * @param bikeID
      */
-    public BikeRentals(int rentalID, Date startDate, Date endDate, Locations locations, Bikes bikes){
+    public BikeRentals(int rentalID, Date startDate, Date endDate, int locationID, int bikeID){
         this.rentalID = rentalID;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.locations = locations;
-        this.bikes = bikes;
+        this.locationID = locationID;
+        this.bikeID = bikeID;
     }
 
     public BikeRentals(){}
@@ -69,16 +59,16 @@ public class BikeRentals {
      * Returns the location ID of a bike
      * @return the location ID of a bike
      */
-    public Locations getLocations() {
-        return locations;
+    public int getLocations() {
+        return locationID;
     }
 
     /**
      * Returns the bike ID of a bike
      * @return the bike ID of a bike
      */
-    public Bikes getBikes() {
-        return bikes;
+    public int getBikeID() {
+        return bikeID;
     }
 
     /**
@@ -107,17 +97,17 @@ public class BikeRentals {
 
     /**
      * Sets a location ID to a rental bike
-     * @param locations the ID for a rental of a bike
+     * @param locationID the ID for a rental of a bike
      */
-    public void setLocations(Locations locations) {
-        this.locations = locations;
+    public void setLocations(int locationID) {
+        this.locationID = locationID;
     }
 
     /**
      * Sets a bike ID to a rental bike
-     * @param bikes the ID of a bike
+     * @param bikeID the ID of a bike
      */
-    public void setBikes(Bikes bikes) {
-        this.bikes = bikes;
+    public void setBikes(int bikeID) {
+        this.bikeID = bikeID;
     }
 }

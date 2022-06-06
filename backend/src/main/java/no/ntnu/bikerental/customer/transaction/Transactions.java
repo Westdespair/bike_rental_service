@@ -1,6 +1,6 @@
-package no.ntnu.bikerental.model;
+package no.ntnu.bikerental.customer.transaction;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import no.ntnu.bikerental.customer.Customers;
 
 import javax.persistence.*;
 

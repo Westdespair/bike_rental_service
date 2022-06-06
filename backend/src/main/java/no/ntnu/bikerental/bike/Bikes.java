@@ -1,35 +1,27 @@
-package no.ntnu.bikerental.model;
+package no.ntnu.bikerental.bike;
 
-import javax.persistence.*;
 
 /**
  *
  */
-@Entity(name = "bikes")
+
 public class Bikes {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
     private int bikeID;
     private boolean helmetIncluded;
     private String colour;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name= "bikeTypeID", nullable = false)
-    private BikeTypes bikeTypes;
-
+    private int BikeTypeID;
     /**
      *
      * @param bikeID
      * @param helmetIncluded
      * @param colour
-     * @param bikeTypes
+     * @param BikeTypeID
      */
-    public Bikes(int bikeID, boolean helmetIncluded, String colour, BikeTypes bikeTypes){
+    public Bikes(int bikeID, boolean helmetIncluded, String colour, int BikeTypeID){
         this.bikeID = bikeID;
         this.helmetIncluded = helmetIncluded;
         this.colour = colour;
-        this.bikeTypes = bikeTypes;
+        this.BikeTypeID = BikeTypeID;
     }
 
     public Bikes() {
@@ -48,8 +40,8 @@ public class Bikes {
      * Returns bike types ID for a bike type ex. electric or manual
      * @return bike types ID for a bike type
      */
-    public BikeTypes getBikeTypeID(){
-        return bikeTypes;
+    public int getBikeTypeID(){
+        return BikeTypeID;
     }
 
     /**
@@ -80,10 +72,10 @@ public class Bikes {
 
     /**
      * Sets bike type ID for which type of bike it is
-     * @param bikeTypes the ID of the bike type
+     * @param BikeTypeID the ID of the bike type
      */
-    public void setBikeTypeID(BikeTypes bikeTypes){
-        this.bikeTypes = bikeTypes;
+    public void setBikeTypeID(int BikeTypeID){
+        this.BikeTypeID = BikeTypeID;
     }
 
     /**

@@ -1,4 +1,4 @@
-package no.ntnu.bikerental.model;
+package no.ntnu.bikerental.customer.order;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

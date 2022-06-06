@@ -1,6 +1,6 @@
-package no.ntnu.bikerental.repository;
+package no.ntnu.bikerental.customer;
 
-import no.ntnu.bikerental.model.Customers;
+import no.ntnu.bikerental.customer.Customers;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
