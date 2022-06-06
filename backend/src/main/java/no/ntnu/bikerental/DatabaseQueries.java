@@ -76,7 +76,6 @@ public class DatabaseQueries {
                 "OR end_date < (SELECT strftime('%Y-%m-%d %H-%M', 'now'))");
         return bikeCountQuery.getInt(1);
     }
-
     /**
      * Gets the amount of available bikes of a specific type
      * @param colour Which colour the bike should be
