@@ -3,10 +3,10 @@ package no.ntnu.bikerental.model;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity()
+@Entity(name = "comments")
 public class Comments {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
     private int commentID;
     private String content;
@@ -28,6 +28,10 @@ public class Comments {
         this.postDate = postDate;
         this.editDate = editDate;
         this.customerID =customerID;
+    }
+
+    public Comments() {
+
     }
 
     public int getCommentID() {
