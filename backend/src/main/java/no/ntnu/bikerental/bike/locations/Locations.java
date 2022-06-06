@@ -5,11 +5,9 @@ import javax.persistence.*;
 /**
  *
  */
-@Entity(name = "locations")
+
 public class Locations {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
+
     private int locationID;
     private int postalNumber;
     private String address;

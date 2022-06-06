@@ -26,5 +26,15 @@ public class CustomerService {
 
     }
 
+    public String addNewCustomer(Customers customers) {
+        boolean added = false;
+        if (customers != null && customers.isValid()) {
+            try {
+                findCustomerById(customers.getCustomerID());
 
+            }
+        }
+
+
+    }
 }

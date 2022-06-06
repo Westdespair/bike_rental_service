@@ -7,43 +7,38 @@ import javax.persistence.*;
 /**
  *
  */
-@Entity(name = "products")
 public class Products {
     private String productName;
     private String colour;
     private float productPrice;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
+
     private int productID;
     private String description;
     private String colourDuration;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name= "locations", nullable = false)
-    private Locations locations;
+
+    private int locationsID;
     private String imagePath;
 
 
     /**
-     *
      * @param productName
      * @param colour
      * @param productPrice
      * @param productID
      * @param colourDuration
-     * @param locations
+     * @param locationsID
      * @param description
      * @param imagePath
      */
-    public Products(String productName, String colour, float productPrice, int productID, String colourDuration, Locations locations, String description, String imagePath) {
+    public Products(String productName, String colour, float productPrice, int productID, String colourDuration, int locationsID, String description, String imagePath) {
         this.productName = productName;
         this.colour = colour;
         this.productPrice = productPrice;
         this.productID = productID;
         this.colourDuration = colourDuration;
-        this.locations = locations;
+        this.locationsID = locationsID;
         this.description = description;
         this.imagePath = imagePath;
     }
@@ -55,69 +50,12 @@ public class Products {
 
     }
 
-
     /**
      *
      * @return
      */
     public String getProductName() {
         return productName;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getColour() {
-        return colour;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public float getProductPrice() {
-        return productPrice;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public int getProductID() {
-        return productID;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getColourDuration() {
-        return colourDuration;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public Locations getLocationID() {
-        return locations;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getDescription(){
-        return description;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getImagePath() {
-        return imagePath;
     }
 
     /**
@@ -130,10 +68,26 @@ public class Products {
 
     /**
      *
+     * @return
+     */
+    public String getColour() {
+        return colour;
+    }
+
+    /**
+     *
      * @param colour
      */
     public void setColour(String colour) {
         this.colour = colour;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public float getProductPrice() {
+        return productPrice;
     }
 
     /**
@@ -146,6 +100,14 @@ public class Products {
 
     /**
      *
+     * @return
+     */
+    public int getProductID() {
+        return productID;
+    }
+
+    /**
+     *
      * @param productID
      */
     public void setProductID(int productID) {
@@ -154,18 +116,10 @@ public class Products {
 
     /**
      *
-     * @param colourDuration
+     * @return
      */
-    public void setColourDuration(String colourDuration) {
-        this.colourDuration = colourDuration;
-    }
-
-    /**
-     *
-     * @param locations
-     */
-    public void setLocationID(Locations locations) {
-        this.locations = locations;
+    public String getDescription() {
+        return description;
     }
 
     /**
@@ -178,9 +132,50 @@ public class Products {
 
     /**
      *
+     * @return
+     */
+    public String getColourDuration() {
+        return colourDuration;
+    }
+
+    /**
+     *
+     * @param colourDuration
+     */
+    public void setColourDuration(String colourDuration) {
+        this.colourDuration = colourDuration;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getLocationsID() {
+        return locationsID;
+    }
+
+    /**
+     *
+     * @param locationsID
+     */
+    public void setLocationsID(int locationsID) {
+        this.locationsID = locationsID;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    /**
+     *
      * @param imagePath
      */
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
 }
+

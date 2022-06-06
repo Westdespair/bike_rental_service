@@ -5,11 +5,9 @@ import javax.persistence.*;
 /**
  *
  */
-@Entity(name = "bike-types")
+
 public class BikeTypes {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
+
     private int bikeTypeID;
     private String bikeTypeName;
     private int pricePerMinute;
