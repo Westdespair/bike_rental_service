@@ -1,10 +1,13 @@
-package no.ntnu.bikerental.service;
+package no.ntnu.bikerental.customer;
 
 import no.ntnu.bikerental.customer.Customers;
 import no.ntnu.bikerental.customer.CustomersRepository;
-import no.ntnu.bikerental.model.Customers;
+import no.ntnu.bikerental.customer.Customers;
 import no.ntnu.bikerental.model.Role;
-import no.ntnu.bikerental.repository.CustomersRepository;
+import org.passay.CharacterRule;
+import org.passay.EnglishCharacterData;
+import org.passay.PasswordGenerator;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -81,7 +84,7 @@ public class CustomerService {
 
         Optional<Customers> customers = customersRepository.findById((long) customerID);
 
-        if (customerID == null) {
+        if (customers == null) {
             errorMessage = "Customer with " + customerID + " not found.";
         }
 
@@ -116,6 +119,25 @@ public class CustomerService {
         return errorMessage;
     }
 
+    /**
+     *
+     * @param email
+     * @return
+     */
+    public String resetPassword(String email){
+        PasswordGenerator passwordGenerator = new PasswordGenerator();
+        CharacterRule alphabets = new CharacterRule(EnglishCharacterData.Alphabetical);
+        CharacterRule digits = new CharacterRule(EnglishCharacterData.Digit);
+        String generatedPassword = passwordGenerator.generatePassword(8, alphabets, digits);
+        Optional<Customers> customers = customersRepository.findByEmail(email);
+        if (customers.isPresent()) {
+            customers.get().setPassword(new BCryptPasswordEncoder().encode(generatedPassword));
+            updateCustomer(customers.get().getCustomerID(), customers.get());
+        }else{
+            generatedPassword = null;
+        }
+        return generatedPassword;
+    }
 }
 
 
