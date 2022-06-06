@@ -3,25 +3,29 @@ package no.ntnu.bikerental.model;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity(name = "comments")
+
 public class Comments {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
+
     private int commentID;
     private String content;
     private LocalDateTime postDate;
     private LocalDateTime editDate;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name= "locations", nullable = false)
-    private Customers customerID;
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name= "locations", nullable = false)
-    private Products productID;
+    private int customerID;
+
+    private int productID;
 
 
-    public Comments(int commentID, String content, Products productID, LocalDateTime postDate, LocalDateTime editDate, Customers customerID){
+    /**
+     *
+     * @param commentID
+     * @param content
+     * @param productID
+     * @param postDate
+     * @param editDate
+     * @param customerID
+     */
+    public Comments(int commentID, String content, int productID, LocalDateTime postDate, LocalDateTime editDate, int customerID){
         this.commentID = commentID;
         this.content = content;
         this.productID = productID;
@@ -30,55 +34,106 @@ public class Comments {
         this.customerID =customerID;
     }
 
+    /**
+     *
+     */
     public Comments() {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public int getCommentID() {
         return commentID;
     }
 
+    /**
+     *
+     * @param commentID
+     */
     public void setCommentID(int commentID) {
         this.commentID = commentID;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getContent() {
         return content;
     }
 
+    /**
+     *
+     * @param content
+     */
     public void setContent(String content) {
         this.content = content;
     }
 
+    /**
+     *
+     * @return
+     */
     public LocalDateTime getPostDate() {
         return postDate;
     }
 
+    /**
+     *
+     * @param postDate
+     */
     public void setPostDate(LocalDateTime postDate) {
         this.postDate = postDate;
     }
 
+    /**
+     *
+     * @return
+     */
     public LocalDateTime getEditDate() {
         return editDate;
     }
 
+    /**
+     *
+     * @param editDate
+     */
     public void setEditDate(LocalDateTime editDate) {
         this.editDate = editDate;
     }
 
-    public Customers getCustomerID() {
+    /**
+     *
+     * @return
+     */
+    public int getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(Customers customerID) {
+    /**
+     *
+     * @param customerID
+     */
+    public void setCustomerID(int customerID) {
         this.customerID = customerID;
     }
 
-    public Products getProductID() {
+    /**
+     *
+     * @return
+     */
+    public int getProductID() {
         return productID;
     }
 
-    public void setProductID(Products productID) {
+    /**
+     *
+     * @param productID
+     */
+    public void setProductID(int productID) {
         this.productID = productID;
     }
 }

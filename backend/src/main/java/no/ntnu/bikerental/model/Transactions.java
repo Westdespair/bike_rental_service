@@ -7,39 +7,23 @@ import javax.persistence.*;
 /**
  *
  */
-@Entity(name = "transactions")
-public class Transactions{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
+public class Transactions {
+
     private int transactionID;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "customerID", nullable = false)
-    private Customers customers;
-
+    private int customerID;
 
 
     /**
-     *
      * @param customers
      * @param transactionID
      */
-    public Transactions(Customers customers, int transactionID) {
-        this.customers = customers;
+    public Transactions(int customerID, int transactionID) {
+        this.customerID = customerID;
         this.transactionID = transactionID;
     }
 
     public Transactions() {
 
-    }
-
-    /**
-     *
-     * @return
-     */
-    public Customers getCustomers() {
-        return customers;
     }
 
     /**
@@ -52,17 +36,25 @@ public class Transactions{
 
     /**
      *
-     * @param customers
-     */
-    public void setCustomers(Customers customers) {
-        this.customers = customers;
-    }
-
-    /**
-     *
      * @param transactionID
      */
     public void setTransactionID(int transactionID) {
         this.transactionID = transactionID;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getCustomerID() {
+        return customerID;
+    }
+
+    /**
+     *
+     * @param customerID
+     */
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 }

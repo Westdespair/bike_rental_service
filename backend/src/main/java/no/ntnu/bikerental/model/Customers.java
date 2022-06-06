@@ -4,9 +4,7 @@ import javax.persistence.*;
 
 @Entity(name = "customers")
 public class Customers {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
+
     private int customerID;
     private String customerName;
     private String email;
@@ -14,7 +12,6 @@ public class Customers {
     private String locationName;
     private int postalNumber;
     private String password;
-    @Enumerated
     private Role role;
 
 
@@ -96,6 +93,10 @@ public class Customers {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public boolean isValid(){
+        return !"".equals(customerName);
     }
 }
 
