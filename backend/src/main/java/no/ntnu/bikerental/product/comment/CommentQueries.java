@@ -1,4 +1,6 @@
-package no.ntnu.bikerental;
+package no.ntnu.bikerental.product.comment;
+
+import no.ntnu.bikerental.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -17,7 +19,7 @@ public class CommentQueries {
      * @param userID the customer_ID of the user in the database
      * @param productID the product_ID of the product the user comments on
      * @param content The comment itself.
-     * @throws SQLException
+     * @throws SQLException If there is a database connectivity error
      */
     public void addComment(int userID, int productID, String content) throws SQLException {
         statement.executeQuery("INSERT INTO Comments (content, product_ID, post_date, customer_ID) " +
@@ -32,7 +34,7 @@ public class CommentQueries {
      * @param userID the customer_ID of the user in the database
      * @param commentID the comment_ID of the current comment in the database
      * @param newContent the content that will replace the current existing content
-     * @throws SQLException
+     * @throws SQLException If there is a database connectivity error
      */
     public void editComment(int userID, int commentID, String newContent) throws SQLException {
         statement.executeQuery("UPDATE Comments "
@@ -67,7 +69,7 @@ public class CommentQueries {
      * Returns the privilege level of users. Often decides which rights they have to different functions.
      * @param customerID The ID of the user we want to check privileges for.
      * @return int privilege, 0 for banned user, 1 for user, 2 for admin
-     * @throws SQLException
+     * @throws SQLException If there is a database connectivity error
      */
     private String getUserRole(int customerID) throws SQLException {
         return statement.executeQuery("SELECT role FROM Customers " +
