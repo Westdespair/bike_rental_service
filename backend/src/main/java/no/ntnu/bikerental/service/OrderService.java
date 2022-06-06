@@ -1,7 +1,7 @@
 package no.ntnu.bikerental.service;
 
 import no.ntnu.bikerental.model.Orders;
-import no.ntnu.bikerental.repository.OrderRepository;
+import no.ntnu.bikerental.repository.OrdersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +11,11 @@ import java.util.List;
 @Service
 public class OrderService {
 @Autowired
-    private OrderRepository orderRepository;
+    private OrdersRepository ordersRepository;
 
 
-    public OrderService(OrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
+    public OrderService(OrdersRepository ordersRepository) {
+        this.ordersRepository = ordersRepository;
     }
 
     public List<Orders> iterableToList(Iterable<Orders> iterable){
@@ -25,7 +25,7 @@ public class OrderService {
     }
 
     public List<Orders> getAll(){
-        return iterableToList(orderRepository.findAll());
+        return iterableToList(ordersRepository.findAll());
     }
 
 

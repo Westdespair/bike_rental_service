@@ -2,7 +2,7 @@ package no.ntnu.bikerental.model;
 
 import javax.persistence.*;
 
-@Entity(name = "costumers")
+@Entity(name = "customers")
 public class Customers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
