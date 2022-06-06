@@ -1,5 +1,7 @@
 package no.ntnu.bikerental.service;
 
+import no.ntnu.bikerental.customer.Customers;
+import no.ntnu.bikerental.customer.CustomersRepository;
 import no.ntnu.bikerental.model.Customers;
 import no.ntnu.bikerental.model.Role;
 import no.ntnu.bikerental.repository.CustomersRepository;
@@ -79,9 +81,11 @@ public class CustomerService {
 
         Optional<Customers> customers = customersRepository.findById((long) customerID);
 
-        if (customerID = null) {
+        if (customerID == null) {
             errorMessage = "Customer with " + customerID + " not found.";
-        } else {
+        }
+
+        if(errorMessage == null){
             customers.ifPresent(value -> customersRepository.delete(value));
         }
 
@@ -89,6 +93,7 @@ public class CustomerService {
     }
 
     /**
+     *
      * @param customerID
      * @param customers
      * @return
@@ -97,9 +102,16 @@ public class CustomerService {
         String errorMessage = null;
         Customers existingCustomer = findCustomerById(customerID);
         if (existingCustomer == null) {
-            errorMessage = "No customer with ID " + customerID + "exsists";
+            errorMessage = "No customer with ID " + customerID + "exists";
+        }else if(customers == null || !customers.isValid()) {
+            errorMessage = "invalid data";
+        }else if(customers.getCustomerID() != customerID){
+            errorMessage = "The ID do not match";
         }
 
+        if(errorMessage == null){
+            customersRepository.save(customers);
+        }
 
         return errorMessage;
     }
