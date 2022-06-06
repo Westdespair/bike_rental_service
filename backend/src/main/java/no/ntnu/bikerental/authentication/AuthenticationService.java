@@ -1,7 +1,7 @@
 package no.ntnu.bikerental.authentication;
 
-import no.ntnu.bikerental.model.Customers;
-import no.ntnu.bikerental.repository.CustomersRepository;
+import no.ntnu.bikerental.customer.Customers;
+import no.ntnu.bikerental.customer.CustomersRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -15,7 +15,7 @@ import java.util.Optional;
 @Service
 public class AuthenticationService implements UserDetailsService {
 
-    private CustomersRepository customersRepository;
+    private final CustomersRepository customersRepository;
 
     /**
      * Constructor with the parameter customer repository

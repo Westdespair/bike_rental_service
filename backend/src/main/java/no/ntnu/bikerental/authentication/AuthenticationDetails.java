@@ -1,6 +1,6 @@
 package no.ntnu.bikerental.authentication;
 
-import no.ntnu.bikerental.model.Customers;
+import no.ntnu.bikerental.customer.Customers;
 import no.ntnu.bikerental.model.Role;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

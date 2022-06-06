@@ -1,4 +1,7 @@
-package no.ntnu.bikerental.model;
+package no.ntnu.bikerental.product.comment;
+
+import no.ntnu.bikerental.customer.Customers;
+import no.ntnu.bikerental.product.Products;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

@@ -1,5 +1,9 @@
 package no.ntnu.bikerental;
-import no.ntnu.bikerental.repository.*;
+import no.ntnu.bikerental.bike.BikesRepository;
+import no.ntnu.bikerental.customer.CustomersRepository;
+import no.ntnu.bikerental.customer.order.OrdersRepository;
+import no.ntnu.bikerental.customer.transaction.TransactionsRepository;
+import no.ntnu.bikerental.product.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
