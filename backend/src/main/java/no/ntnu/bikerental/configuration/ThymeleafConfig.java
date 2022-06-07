@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 
 @Configuration
 public class ThymeleafConfig {
-/*
+
     @Bean
     public SpringTemplateEngine springTemplateEngine() {
         SpringTemplateEngine springTemplateEngine = new SpringTemplateEngine();
@@ -32,5 +32,4 @@ public class ThymeleafConfig {
         return emailTemplateResolver;
     }
 
- */
 }

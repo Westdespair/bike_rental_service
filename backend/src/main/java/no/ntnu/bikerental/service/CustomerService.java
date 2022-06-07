@@ -1,9 +1,8 @@
-package no.ntnu.bikerental.customer;
+package no.ntnu.bikerental.service;
 
-import no.ntnu.bikerental.customer.Customers;
-import no.ntnu.bikerental.customer.CustomersRepository;
-import no.ntnu.bikerental.customer.Customers;
+import no.ntnu.bikerental.model.Customers;
 import no.ntnu.bikerental.model.Role;
+import no.ntnu.bikerental.repository.CustomersRepository;
 import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.PasswordGenerator;

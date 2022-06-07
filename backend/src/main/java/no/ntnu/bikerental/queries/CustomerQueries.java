@@ -1,4 +1,4 @@
-package no.ntnu.bikerental.customer;
+package no.ntnu.bikerental.queries;
 
 import no.ntnu.bikerental.DatabaseConnection;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

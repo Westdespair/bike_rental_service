@@ -1,6 +1,4 @@
-package no.ntnu.bikerental.product;
-
-import no.ntnu.bikerental.bike.locations.Locations;
+package no.ntnu.bikerental.model;
 
 import javax.persistence.*;
 

@@ -1,7 +1,7 @@
 package no.ntnu.bikerental.authentication;
 
-import no.ntnu.bikerental.customer.CustomerService;
-import no.ntnu.bikerental.customer.Customers;
+import no.ntnu.bikerental.service.CustomerService;
+import no.ntnu.bikerental.model.Customers;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

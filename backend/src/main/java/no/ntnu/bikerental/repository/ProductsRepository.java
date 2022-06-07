@@ -1,6 +1,6 @@
-package no.ntnu.bikerental.product;
+package no.ntnu.bikerental.repository;
 
-import no.ntnu.bikerental.product.Products;
+import no.ntnu.bikerental.model.Products;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

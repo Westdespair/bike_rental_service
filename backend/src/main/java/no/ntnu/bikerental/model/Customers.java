@@ -1,6 +1,4 @@
-package no.ntnu.bikerental.customer;
-
-import no.ntnu.bikerental.model.Role;
+package no.ntnu.bikerental.model;
 
 import javax.persistence.*;
 

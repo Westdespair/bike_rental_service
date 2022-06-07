@@ -1,4 +1,4 @@
-package no.ntnu.bikerental.product.comment;
+package no.ntnu.bikerental.queries;
 
 import no.ntnu.bikerental.DatabaseConnection;
 
