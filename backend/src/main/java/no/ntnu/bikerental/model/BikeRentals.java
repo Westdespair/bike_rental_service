@@ -1,20 +1,24 @@
 package no.ntnu.bikerental.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
  *
  */
 @Entity
+@Table(name = "BikeRentals", schema = "bikerental")
 public class BikeRentals {
     @Id
+    @GeneratedValue
     private int rentalID;
     private Date startDate;
     private Date endDate;
-    private int locationID;
-    private int bikeID;
+
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private Locations locationID;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private Bikes bikeID;
 
     /**
      *
@@ -24,7 +28,7 @@ public class BikeRentals {
      * @param locationID
      * @param bikeID
      */
-    public BikeRentals(int rentalID, Date startDate, Date endDate, int locationID, int bikeID){
+    public BikeRentals(int rentalID, Date startDate, Date endDate, Locations locationID, Bikes bikeID){
         this.rentalID = rentalID;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -32,7 +36,10 @@ public class BikeRentals {
         this.bikeID = bikeID;
     }
 
-    public BikeRentals(){}
+    public BikeRentals() {
+
+    }
+
 
     /**
      * Returns the rental ID of a bike
@@ -62,7 +69,7 @@ public class BikeRentals {
      * Returns the location ID of a bike
      * @return the location ID of a bike
      */
-    public int getLocations() {
+    public Locations getLocations() {
         return locationID;
     }
 
@@ -70,7 +77,7 @@ public class BikeRentals {
      * Returns the bike ID of a bike
      * @return the bike ID of a bike
      */
-    public int getBikeID() {
+    public Bikes getBikeID() {
         return bikeID;
     }
 
@@ -102,7 +109,7 @@ public class BikeRentals {
      * Sets a location ID to a rental bike
      * @param locationID the ID for a rental of a bike
      */
-    public void setLocations(int locationID) {
+    public void setLocations(Locations locationID) {
         this.locationID = locationID;
     }
 
@@ -110,7 +117,8 @@ public class BikeRentals {
      * Sets a bike ID to a rental bike
      * @param bikeID the ID of a bike
      */
-    public void setBikes(int bikeID) {
+    public void setBikes(Bikes bikeID) {
         this.bikeID = bikeID;
     }
 }
+

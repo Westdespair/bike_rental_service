@@ -1,9 +1,15 @@
 package no.ntnu.bikerental.model;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity(name = "customers")
+@Table(name = "Customers")
 public class Customers {
     @Id
+    @GeneratedValue
     private int customerID;
     private String customerName;
     private String email;
@@ -14,7 +20,8 @@ public class Customers {
     private Role role;
 
 
-    public Customers(int customerID, String customerName, String email, String address, String locationName, int postalNumber, String password, Role role) {
+
+    public Customers(int customerID, String customerName, String email, String address, String locationName, int postalNumber, String password, Role role){
         this.customerID = customerID;
         this.customerName = customerName;
         this.email = email;
@@ -93,14 +100,9 @@ public class Customers {
         this.role = role;
     }
 
-    public boolean isValid() {
+    public boolean isValid(){
         return !"".equals(customerName);
     }
-
 }
-
-
-
-
 
 

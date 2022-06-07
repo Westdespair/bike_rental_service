@@ -1,13 +1,18 @@
 package no.ntnu.bikerental.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  */
 @Entity
+@Table(name = "BikeTypes")
 public class BikeTypes {
     @Id
+    @GeneratedValue
     private int bikeTypeID;
     private String bikeTypeName;
     private int pricePerMinute;

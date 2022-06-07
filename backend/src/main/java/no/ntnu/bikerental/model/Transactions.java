@@ -6,17 +6,20 @@ import javax.persistence.*;
  *
  */
 @Entity
+@Table(name = "Transactions")
 public class Transactions {
     @Id
+    @GeneratedValue
     private int transactionID;
-    private int customerID;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private Customers customerID;
 
 
     /**
-     * @param customers
+     * @param customerID
      * @param transactionID
      */
-    public Transactions(int customerID, int transactionID) {
+    public Transactions(Customers customerID, int transactionID) {
         this.customerID = customerID;
         this.transactionID = transactionID;
     }
@@ -45,7 +48,7 @@ public class Transactions {
      *
      * @return
      */
-    public int getCustomerID() {
+    public Customers getCustomerID() {
         return customerID;
     }
 
@@ -53,7 +56,7 @@ public class Transactions {
      *
      * @param customerID
      */
-    public void setCustomerID(int customerID) {
+    public void setCustomerID(Customers customerID) {
         this.customerID = customerID;
     }
 }

@@ -6,17 +6,19 @@ import javax.persistence.*;
  *
  */
 @Entity
+@Table(name = "Products")
 public class Products {
     private String productName;
     private String colour;
     private float productPrice;
     @Id
+    @GeneratedValue
     private int productID;
     private String description;
     private String colourDuration;
 
-
-    private int locationsID;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private Locations locationsID;
     private String imagePath;
 
 
@@ -30,7 +32,7 @@ public class Products {
      * @param description
      * @param imagePath
      */
-    public Products(String productName, String colour, float productPrice, int productID, String colourDuration, int locationsID, String description, String imagePath) {
+    public Products(String productName, String colour, float productPrice, int productID, String colourDuration, Locations locationsID, String description, String imagePath) {
         this.productName = productName;
         this.colour = colour;
         this.productPrice = productPrice;
@@ -148,7 +150,7 @@ public class Products {
      *
      * @return
      */
-    public int getLocationsID() {
+    public Locations getLocationsID() {
         return locationsID;
     }
 
@@ -156,7 +158,7 @@ public class Products {
      *
      * @param locationsID
      */
-    public void setLocationsID(int locationsID) {
+    public void setLocationsID(Locations locationsID) {
         this.locationsID = locationsID;
     }
 

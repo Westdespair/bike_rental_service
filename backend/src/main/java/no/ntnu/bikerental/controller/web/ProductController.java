@@ -12,9 +12,9 @@ public class ProductController {
      * @param model
      * @return
      */
-    @GetMapping("/products-choises")
+    @GetMapping("/products-manualorelectric")
     public String getProduct(Model model){
-        return "HTML/ProductChoices";
+        return "HTML/manual_or_electric";
     }
 
 
@@ -24,8 +24,8 @@ public class ProductController {
      * @return
      */
     @GetMapping("/product-color")
-    public String getColorChoises(Model model){
-        return "HTML/ProductColor";
+    public String getColorChoices(Model model){
+        return "HTML/product_color";
     }
 
     /**
@@ -35,6 +35,6 @@ public class ProductController {
      */
     @GetMapping("/anything-else")
     public String getAnythingElse(Model model){
-        return "HTML/AnythingElse";
+        return "HTML/product_choices";
     }
 }

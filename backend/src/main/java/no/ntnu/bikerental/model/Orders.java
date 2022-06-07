@@ -1,17 +1,21 @@
 package no.ntnu.bikerental.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 @Entity
+@Table(name = "Orders")
 public class Orders {
     @Id
+    @GeneratedValue
     private int orderID;
-    private int transactionID;
-    private int productID;
-    private int rentalID;
 
-    public Orders(int orderID, int transactionID, int productID, int rentalID) {
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private Transactions transactionID;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private Products productID;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private BikeRentals rentalID;
+
+    public Orders(int orderID, Transactions transactionID, Products productID, BikeRentals rentalID) {
         this.orderID = orderID;
         this.transactionID = transactionID;
         this.productID = productID;
@@ -27,15 +31,15 @@ public class Orders {
         return orderID;
     }
 
-    public int getTransactionID() {
+    public Transactions getTransactionID() {
         return transactionID;
     }
 
-    public int getProductID() {
+    public Products getProductID() {
         return productID;
     }
 
-    public int getRentalID() {
+    public BikeRentals getRentalID() {
         return rentalID;
     }
 
@@ -43,15 +47,15 @@ public class Orders {
         this.orderID = orderID;
     }
 
-    public void setTransactionID(int transactionID) {
+    public void setTransactionID(Transactions transactionID) {
         this.transactionID = transactionID;
     }
 
-    public void setProductID(int productID) {
+    public void setProductID(Products productID) {
         this.productID = productID;
     }
 
-    public void setRentalID(int rentalID) {
+    public void setRentalID(BikeRentals rentalID) {
         this.rentalID = rentalID;
     }
 }

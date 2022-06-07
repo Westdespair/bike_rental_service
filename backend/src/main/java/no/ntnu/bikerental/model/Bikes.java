@@ -1,19 +1,21 @@
 package no.ntnu.bikerental.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  *
  */
 @Entity
+@Table(name = "Bikes")
 public class Bikes {
     @Id
+    @GeneratedValue
     private int bikeID;
     private boolean helmetIncluded;
     private String colour;
-    private int BikeTypeID;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private BikeTypes BikeTypeID;
     /**
      *
      * @param bikeID
@@ -21,7 +23,7 @@ public class Bikes {
      * @param colour
      * @param BikeTypeID
      */
-    public Bikes(int bikeID, boolean helmetIncluded, String colour, int BikeTypeID){
+    public Bikes(int bikeID, boolean helmetIncluded, String colour, BikeTypes BikeTypeID){
         this.bikeID = bikeID;
         this.helmetIncluded = helmetIncluded;
         this.colour = colour;
@@ -31,8 +33,6 @@ public class Bikes {
     public Bikes() {
 
     }
-
-
 
     /**
      * Returns bike ID for a bike
@@ -46,7 +46,7 @@ public class Bikes {
      * Returns bike types ID for a bike type ex. electric or manual
      * @return bike types ID for a bike type
      */
-    public int getBikeTypeID(){
+    public BikeTypes getBikeTypeID(){
         return BikeTypeID;
     }
 
@@ -80,7 +80,7 @@ public class Bikes {
      * Sets bike type ID for which type of bike it is
      * @param BikeTypeID the ID of the bike type
      */
-    public void setBikeTypeID(int BikeTypeID){
+    public void setBikeTypeID(BikeTypes BikeTypeID){
         this.BikeTypeID = BikeTypeID;
     }
 

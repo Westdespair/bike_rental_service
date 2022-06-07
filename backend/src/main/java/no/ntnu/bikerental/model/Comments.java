@@ -4,14 +4,18 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "Comments")
 public class Comments {
     @Id
+    @GeneratedValue
     private int commentID;
     private String content;
     private LocalDateTime postDate;
     private LocalDateTime editDate;
-    private int customerID;
-    private int productID;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private Customers customerID;
+    @ManyToOne(cascade = CascadeType.MERGE, fetch= FetchType.EAGER)
+    private Products productID;
 
 
     /**
@@ -23,7 +27,7 @@ public class Comments {
      * @param editDate
      * @param customerID
      */
-    public Comments(int commentID, String content, int productID, LocalDateTime postDate, LocalDateTime editDate, int customerID){
+    public Comments(int commentID, String content, Products productID, LocalDateTime postDate, LocalDateTime editDate, Customers customerID){
         this.commentID = commentID;
         this.content = content;
         this.productID = productID;
@@ -107,7 +111,7 @@ public class Comments {
      *
      * @return
      */
-    public int getCustomerID() {
+    public Customers getCustomerID() {
         return customerID;
     }
 
@@ -115,7 +119,7 @@ public class Comments {
      *
      * @param customerID
      */
-    public void setCustomerID(int customerID) {
+    public void setCustomerID(Customers customerID) {
         this.customerID = customerID;
     }
 
@@ -123,7 +127,7 @@ public class Comments {
      *
      * @return
      */
-    public int getProductID() {
+    public Products getProductID() {
         return productID;
     }
 
@@ -131,7 +135,7 @@ public class Comments {
      *
      * @param productID
      */
-    public void setProductID(int productID) {
+    public void setProductID(Products productID) {
         this.productID = productID;
     }
 }

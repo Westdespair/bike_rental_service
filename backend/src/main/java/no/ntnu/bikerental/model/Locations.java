@@ -1,14 +1,17 @@
 package no.ntnu.bikerental.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 /**
  *
  */
 @Entity
+@Table(name = "Locations")
 public class Locations {
-    @Id
-    private int locationID;
+    private@Id
+    @GeneratedValue
+    int id;
     private int postalNumber;
     private String address;
     private String locationName;
@@ -16,14 +19,14 @@ public class Locations {
 
     /**
      *
-     * @param locationID
+     * @param id
      * @param postalNumber
      * @param address
      * @param locationName
      * @param areaName
      */
-    public Locations(int locationID, int postalNumber, String address, String locationName, String areaName) {
-        this.locationID = locationID;
+    public Locations(int id, int postalNumber, String address, String locationName, String areaName) {
+        this.id = id;
         this.postalNumber = postalNumber;
         this.address = address;
         this.locationName = locationName;
@@ -39,7 +42,7 @@ public class Locations {
      * @return the location ID of a bike
      */
     public int getLocationID() {
-        return locationID;
+        return id;
     }
 
     /**
@@ -80,7 +83,7 @@ public class Locations {
      * @param locationID the ID for a rental of a bike
      */
     public void setLocationID(int locationID) {
-        this.locationID = locationID;
+        this.id = locationID;
     }
 
     /**
@@ -116,5 +119,15 @@ public class Locations {
     }
 
 
+    @OneToMany(mappedBy = "locationID")
+    private Collection<BikeRentals> bikeRentals;
+
+    public Collection<BikeRentals> getBikeRentals() {
+        return bikeRentals;
+    }
+
+    public void setBikeRentals(Collection<BikeRentals> bikeRentals) {
+        this.bikeRentals = bikeRentals;
+    }
 }
 
