@@ -1,9 +1,3 @@
-# Bike-rental-service
-A website for a fictional bike rental service, Keep Rolling Rolling Rolling. Made as a project in our web application and web technology courses. bike_rental_service is a CRUD web application with user sessions and permissions. 
-
-**You can find the site hosted online on:**
-
-https://gr08.web-tek.ninja/ **(Only accessible through NTNU networks)**
 ## Website functionality
  ### Different roles with different permissions:
  #### Guest: 
@@ -43,7 +37,6 @@ https://gr08.web-tek.ninja/ **(Only accessible through NTNU networks)**
 -->
 
 
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -56,7 +49,7 @@ https://gr08.web-tek.ninja/ **(Only accessible through NTNU networks)**
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![GPL License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -68,7 +61,7 @@ https://gr08.web-tek.ninja/ **(Only accessible through NTNU networks)**
 <h3 align="center">Bike Rental Service</h3>
 
   <p align="center">
-    project_description
+    A website for a fictional bike rental service, Keep Rolling Rolling Rolling. Made as a project in our web application and web technology courses. bike_rental_service is a CRUD web application with user sessions and permissions.  You can find the site hosted online on:  https://gr08.web-tek.ninja/ (Only accessible through NTNU networks)
     <br />
     <a href="https://github.com/westdespair/bike_rental_service"><strong>Explore the docs »</strong></a>
     <br />
@@ -116,22 +109,16 @@ https://gr08.web-tek.ninja/ **(Only accessible through NTNU networks)**
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `westdespair`, `bike_rental_service`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Bike Rental Service`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `westdespair`, `bike_rental_service`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Bike Rental Service`, `A website for a fictional bike rental service, Keep Rolling Rolling Rolling. Made as a project in our web application and web technology courses. bike_rental_service is a CRUD web application with user sessions and permissions.  You can find the site hosted online on:  https://gr08.web-tek.ninja/ (Only accessible through NTNU networks)`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 ### Built With
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [Sqlite](https://www.sqlite.org/index.html)
+* [Thymeleaf](https://www.thymeleaf.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -196,43 +183,19 @@ See the [open issues](https://github.com/westdespair/bike_rental_service/issues)
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+<!-- So, can I contribute? -->
+## So, can I contribute?
+As this is intended as a school project, we will not be accepting contributions from the community. The repository is kept public to let professors examine our project without requesting read access. Feel free to make a fork if you want to though!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the [GPL License](https://www.gnu.org/licenses/gpl-3.0.txt). You are allowed to copy and modify the contents, but it must be done non-commercially. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/westdespair/bike_rental_service](https://github.com/westdespair/bike_rental_service)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -242,7 +205,6 @@ Project Link: [https://github.com/westdespair/bike_rental_service](https://githu
 * []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -257,6 +219,4 @@ Project Link: [https://github.com/westdespair/bike_rental_service](https://githu
 [issues-url]: https://github.com/westdespair/bike_rental_service/issues
 [license-shield]: https://img.shields.io/github/license/westdespair/bike_rental_service.svg?style=for-the-badge
 [license-url]: https://github.com/westdespair/bike_rental_service/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
