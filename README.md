@@ -22,7 +22,6 @@
     <a href="https://gr08.web-tek.ninja/"><strong>Check it out here!»</strong></a>
     <br />
     <br />
-    <a href="https://github.com/westdespair/bike_rental_service">View Demo</a>
   </p>
 </div>
 
