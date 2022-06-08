@@ -1,32 +1,3 @@
-## Website functionality
- ### Different roles with different permissions:
- #### Guest: 
-  * Non logged-in user
-  * Can only access surface information, can't rent bike yet
-  * Call to action leads to user account creation
- #### User: 
-  * Logged in user
-  * Order one bike at the time and perform transactions
-  * Post comments
-  * edit own comments
-  * delete own comments
-
- #### Admin:
-  * All rights of user
-  * Delete other user comments
-  * Disable users
-  * Set users as admin
-  * Add or remove products
-  * Add or remove bikes
-
-## Design Guidelines:
-* Rounded edges, images, buttons
-* Rounded sans-serif fonts. Roboto? Ubuntu?
-* Vibrant, healthy colours
-* Shadows under selected elements
-* Never too many images of hip people on bikes
-
-
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -35,21 +6,6 @@
 *** Don't forget to give the project a star!
 *** Thanks again! Now go create something AMAZING! :D
 -->
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![GPL License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -61,16 +17,12 @@
 <h3 align="center">Bike Rental Service</h3>
 
   <p align="center">
-    A website for a fictional bike rental service, Keep Rolling Rolling Rolling. Made as a project in our web application and web technology courses. bike_rental_service is a CRUD web application with user sessions and permissions.  You can find the site hosted online on:  https://gr08.web-tek.ninja/ (Only accessible through NTNU networks)
+    A website for a fictional bike rental service, Keep Rolling Rolling Rolling. Made as a project in our web application and web technology courses. bike_rental_service is a CRUD web application with user sessions and permissions. The site is hosted online, but you can only access it through NTNU networks or a VPN.
     <br />
-    <a href="https://github.com/westdespair/bike_rental_service"><strong>Explore the docs »</strong></a>
+    <a href="https://gr08.web-tek.ninja/"><strong>Check it out here!»</strong></a>
     <br />
     <br />
     <a href="https://github.com/westdespair/bike_rental_service">View Demo</a>
-    ·
-    <a href="https://github.com/westdespair/bike_rental_service/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/westdespair/bike_rental_service/issues">Request Feature</a>
   </p>
 </div>
 
@@ -93,10 +45,10 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#So-can-I-contribute">So, can I contribute?</a></li>
+    <li><a href="#functionality">Functionality</a></li>
+    <li><a href="#so-can-i-contribute">So, can I contribute?</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgements">acknowledgements</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -104,14 +56,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+![image](https://user-images.githubusercontent.com/64530905/172671727-b4c98fd3-061c-459c-9461-0eb1b84a1f70.png)
+Keep Rolling Rolling Rolling is a website for a fictional bike rental service. It was made as a project in our web application and web technology courses. bike_rental_service is a CRUD web application with user sessions and permissions. You can find the site hosted online on:  https://gr08.web-tek.ninja/ (Only accessible through NTNU networks)
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `westdespair`, `bike_rental_service`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Bike Rental Service`, `A website for a fictional bike rental service, Keep Rolling Rolling Rolling. Made as a project in our web application and web technology courses. bike_rental_service is a CRUD web application with user sessions and permissions.  You can find the site hosted online on:  https://gr08.web-tek.ninja/ (Only accessible through NTNU networks)`
-
-
-
-
+The website features a frontend made in JS, Thymeleafs, CSS, and HTML. The backend consists of an SQLite database, and a Springboot application. 
 
 ### Built With
 * [Spring Boot](https://spring.io/projects/spring-boot)
@@ -138,7 +86,7 @@ What you need to run our project:
    ```
 2. Open repository in your IDE of choice. We used Intellij for the Spring backend and Webstorm for the frontend.
 
-3. If you only want to see the frontend, open index.html in your browser of choice. You can find index.html here: `https://github.com/Westdespair/bike_rental_service/tree/main/backend/src/main/resources/templates/index.html`
+3. Just looking at the frontend? Just open index.html in your browser of choice. You can find index.html here: `https://github.com/Westdespair/bike_rental_service/tree/main/backend/src/main/resources/templates/index.html`
 4. To also access the backend, run "BikerentalApplication" from `https://github.com/Westdespair/bike_rental_service/blob/main/backend/src/main/java/no/ntnu/bikerental/BikerentalApplication.java`
 5. Open to view the website, open in browser: `localhost:/8080`
 
@@ -146,12 +94,38 @@ What you need to run our project:
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- FUNCTIONALITY -->
+## Functionality
+![image](https://user-images.githubusercontent.com/64530905/172671888-a5428d46-b150-4605-880c-6bbbdbc57323.png)
+![image](https://user-images.githubusercontent.com/64530905/172672108-4575c6c0-6e2c-4347-a5a5-f87a6846bdba.png)
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Intuitive menu allows user to select the bike they want, or prompt them to select something else should the bike be unavailable.
+ ### Different roles with different permissions:
+ #### Guest: 
+  * Non logged-in user
+  * Can only access surface information, can't rent bike yet
+  * Call to action leads to user account creation
+ #### User: 
+  * Logged in user
+  * Order one bike at the time and perform transactions
+  * Post comments
+  * edit own comments
+  * delete own comments
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+ #### Admin:
+  * All rights of user
+  * Delete other user comments
+  * Disable users
+  * Set users as admin
+  * Add or remove products
+  * Add or remove bikes
+
+## Design Guidelines:
+* Rounded edges, images, buttons
+* Rounded sans-serif fonts. Roboto? Ubuntu?
+* Vibrant, healthy colours
+* Shadows under selected elements
+* Never too many images of hip people on bikes
 
 <!-- SO CAN I CONTRIBUTE -->
 ## So, can I contribute?
