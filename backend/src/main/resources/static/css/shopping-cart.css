@@ -73,15 +73,16 @@
 
 .item-img{
     display: block;
-    height: 10rem;
+    max-height: 10rem;
     width: 16.1rem;
     border-radius: var(--border-radius);
     object-fit: cover;
 }
 
 .item-img img{
+    display: block;
     height: 100%;
-    width: 100%;
+    margin: auto;
     border-radius: var(--border-radius);
 }
 
@@ -111,11 +112,14 @@
 
 }
 
-
-
-.total-container{
+.checkout-container{
+    width: 23rem;
     margin-right: 4rem;
     margin-top: 5rem;
+}
+
+.total-container{
+
     padding: 1rem;
     border-radius: var(--border-radius);
     height: 22rem;
@@ -127,8 +131,9 @@
     box-shadow: 0 0.125rem 0.25rem #a6a6a6;
 }
 
-.promo-wrapper{
-
+.information{
+    color: #a6a6a6;
+    text-align: center;
 }
 
 .promo{

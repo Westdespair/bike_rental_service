@@ -15,6 +15,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 1.5rem;
 }
 
 .modal {
@@ -27,8 +28,8 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    padding-top: 10rem;
 }
 
 /* Modal Content/Box */
@@ -38,64 +39,84 @@
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     width: 30%; /* Could be more or less, depending on screen size */
-    height: 300px;
+    height: 400px;
 
 }
 
 .login-button2{
-    background-color: mediumseagreen;
+    background-color: var(--box-shadow);
     height: 50px;
     width: 110px;
     border-radius: var(--border-radius);
     font-size: large;
     color: #ffffff;
-
-
-
-
-
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem #a6a6a6;
 }
 
 .cancel-button{
-    background-color: darkred;
+    background-color: grey;
     height: 50px;
     width: 110px;
     border-radius: var(--border-radius);
     font-size: large;
     color: #ffffff;
-
-
-
-
+    border:none;
+    box-shadow: 0 0.125rem 0.25rem #a6a6a6;
 }
 
 .placeholder{
     height: 50px;
     margin: auto;
     width: 70%;
-    border: 2px solid mediumseagreen;
+    border: 2px solid var(--box-shadow);
     padding: 10px;
     border-radius: var(--border-radius);
-
+    box-shadow: 0 0.125rem 0.25rem #a6a6a6;
 }
 
 .container{
     display: grid;
     align-content: center;
+    padding-top: 2rem;
+}
 
 
+
+.container1{
+    margin: auto;
+    display: block;
 
 }
 
+.remember1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: .8rem;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 1.5rem auto 1rem;
+}
+
+.psw{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
 
 /* The Close Button */
 .close {
     /* Position it in the top right corner outside of the modal */
     position: absolute;
-    right: 25px;
-    top: 0;
-    color:red;
-    font-size: 35px;
+    right: 50px;
+    top: 10px;
+    color: white;
+    font-size: 50px;
     font-weight: bold;
 }
 

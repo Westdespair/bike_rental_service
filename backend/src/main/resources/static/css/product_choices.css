@@ -26,5 +26,11 @@
     text-align: center;
     color: var(--text);
     font-size: 2.5rem;
+
 }
 
+.choice-paint{
+    width: 30rem;
+    height: 30rem;
+    background: #00d200;
+}

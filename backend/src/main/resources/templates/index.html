@@ -19,7 +19,7 @@
 <header class="header" th:fragment="header">
     <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
     <div class="nav-bar">
-        <button type="button" class="shopping-cart" onclick="location.href='#'"></button>
+        <button type="button" class="shopping-cart" onclick="location.href=''"></button>
         <button type="button" class="login-button" onclick="document.getElementById('id01').style.display='block'">
         </button>
     </div>
@@ -40,24 +40,23 @@
             <input type="text" class="placeholder" placeholder="Enter Username" name="uname" required id="uname">
 
 
-
             <label class="text1" for="psw"><b>Password</b></label>
             <input type="password" class="placeholder" placeholder="Enter Password" name="psw" required id="psw">
 
-
-        </div>
-            <div class="button-container">
-            <button class="login-button2" type="submit">Login</button>
-            <label>
-
+            <label class="remember1">
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
         </div>
+        <div class="button-container">
 
-        <div class="container" style="background-color:#f1f1f1">
-            <button class="cancel-button" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+            <button class="cancel-button" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            <button class="login-button2" type="submit">Login</button>
         </div>
+        <div class="container1">
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <span class="create-user"></span>
+        </div>
+
     </form>
 </div>
 

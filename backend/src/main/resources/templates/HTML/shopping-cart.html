@@ -66,12 +66,12 @@
                     </div>
                     <div class="item-values">
                         <h3>Bike</h3>
-                        <p>Type: Electric</p>
+                        <p>Type: electric</p>
                         <p>Color: Yellow</p>
                     </div>
                     <div class="unit-price">
                         <h3>Product price</h3>
-                        <p>NOK</p>
+                        <p>150 NOK/pr hour</p>
                     </div>
                     <div class="quantity">
                         <h3>Quantity</h3>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="total-price">
                         <h3>Total</h3>
-                        <p>NOK</p>
+                        <p>Payment when rental is done</p>
                     </div>
                 </div>
                 <div class="items-under">
@@ -89,16 +89,16 @@
             <div class="item" id="item3">
                 <div class="items-over">
                     <div class="item-img">
-                        <img src="../../static/pictures/bicycle/electric_bike.jpg" alt="electric bike"/>
+                        <img src="../../static/pictures/products/bags/tote_bag_logo.jpg" alt="tote bag"/>
                     </div>
                     <div class="item-values">
-                        <h3>Bike</h3>
-                        <p>Type: Electric</p>
-                        <p>Color: Yellow</p>
+                        <h3>KRRR Bag</h3>
+                        <p>Type: with logo</p>
+                        <p>Color: beige</p>
                     </div>
                     <div class="unit-price">
                         <h3>Product price</h3>
-                        <p>NOK</p>
+                        <p>250 NOK</p>
                     </div>
                     <div class="quantity">
                         <h3>Quantity</h3>
@@ -106,42 +106,43 @@
                     </div>
                     <div class="total-price">
                         <h3>Total</h3>
-                        <p>NOK</p>
+                        <p>250 NOK</p>
                     </div>
                 </div>
                 <div class="items-under">
                 </div>
             </div>
-
-            //more items
-
         </div>
 
-        <div class="total-container">
-            <div class="promo-wrapper">
-                <p class="promo">Enter promo code</p>
-                <label for="promo-field"></label><input type="text" placeholder="Promo Code" id="promo-field">
-                <button type="submit" value="Submit" id="promo-field-button">Submit</button>
+        <div class="checkout-container">
+            <div class="total-container">
+                <div class="promo-wrapper">
+                    <p class="promo">Enter promo code</p>
+                    <label for="promo-field"></label><input type="text" placeholder="Promo Code" id="promo-field">
+                    <button type="submit" value="Submit" id="promo-field-button">Submit</button>
+                </div>
+                <div class="total-wrapper">
+                    <div class="delivery-cost">
+                        <p class="cost">Delivery cost:</p>
+                        <p class="values">0 NOK</p>
+                    </div>
+                    <div class="discount">
+                        <p class="cost">Discount:</p>
+                        <p class="values">-0 NOK</p>
+                    </div>
+                    <div class="discount">
+                        <p class="cost">Discount:</p>
+                        <p class="values">-0 NOK</p>
+                    </div>
+                    <div class="total">
+                        <p class="total-text">TOTAL:</p>
+                        <p class="total-text">126 NOK</p>
+                    </div>
+                    <button class="checkout-button" type="submit" value="Checkout" id="checkout-button">Checkout</button>
+                </div>
             </div>
-            <div class="total-wrapper">
-                <div class="delivery-cost">
-                    <p class="cost">Delivery cost:</p>
-                    <p class="values">0 NOK</p>
-                </div>
-                <div class="discount">
-                    <p class="cost">Discount:</p>
-                    <p class="values">-0 NOK</p>
-                </div>
-                <div class="discount">
-                    <p class="cost">Discount:</p>
-                    <p class="values">-0 NOK</p>
-                </div>
-                <div class="total">
-                    <p class="total-text">TOTAL:</p>
-                    <p class="total-text">126 NOK</p>
-                </div>
-                <button class="checkout-button" type="submit" value="Checkout" id="checkout-button">Checkout</button>
-            </div>
+            <span class="information">No withdrawal will be done until after the rental
+                is done. Your card will be saved in our system until the rental is over.</span>
         </div>
     </div>
 </div>
