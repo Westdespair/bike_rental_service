@@ -55,7 +55,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/westdespair/bike_rental_service">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/Westdespair/bike_rental_service/blob/main/backend/src/main/resources/static/pictures/keeprollingrollingrolling_logo_200x200.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Bike Rental Service</h3>
@@ -94,11 +94,9 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#So-can-I-contribute">So, can I contribute?</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgements">acknowledgements</a></li>
   </ol>
 </details>
 
@@ -111,7 +109,7 @@
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `westdespair`, `bike_rental_service`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Bike Rental Service`, `A website for a fictional bike rental service, Keep Rolling Rolling Rolling. Made as a project in our web application and web technology courses. bike_rental_service is a CRUD web application with user sessions and permissions.  You can find the site hosted online on:  https://gr08.web-tek.ninja/ (Only accessible through NTNU networks)`
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 
@@ -120,7 +118,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [Sqlite](https://www.sqlite.org/index.html)
 * [Thymeleaf](https://www.thymeleaf.org/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 
@@ -154,7 +152,7 @@ This is an example of how to list things you need to use the software and how to
    const API_KEY = 'ENTER YOUR API';
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 
@@ -165,29 +163,12 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/westdespair/bike_rental_service/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- So, can I contribute? -->
+<!-- SO CAN I CONTRIBUTE -->
 ## So, can I contribute?
+### Not at this time. 
 As this is intended as a school project, we will not be accepting contributions from the community. The repository is kept public to let professors examine our project without requesting read access. Feel free to make a fork if you want to though!
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- LICENSE -->
@@ -195,17 +176,15 @@ As this is intended as a school project, we will not be accepting contributions 
 
 Distributed under the [GPL License](https://www.gnu.org/licenses/gpl-3.0.txt). You are allowed to copy and modify the contents, but it must be done non-commercially. 
 
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+Some convenient stuff we've taken advantage of:
+* [Readme template by Othneil Drew](https://github.com/othneildrew/Best-README-Template#getting-started)
+* [Free stock photos from Pexels](https://www.pexels.com/)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
