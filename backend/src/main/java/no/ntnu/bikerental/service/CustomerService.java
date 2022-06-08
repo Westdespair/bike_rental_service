@@ -118,25 +118,6 @@ public class CustomerService {
         return errorMessage;
     }
 
-    /**
-     *
-     * @param email
-     * @return
-     */
-    public String resetPassword(String email){
-        PasswordGenerator passwordGenerator = new PasswordGenerator();
-        CharacterRule alphabets = new CharacterRule(EnglishCharacterData.Alphabetical);
-        CharacterRule digits = new CharacterRule(EnglishCharacterData.Digit);
-        String generatedPassword = passwordGenerator.generatePassword(8, alphabets, digits);
-        Optional<Customers> customers = customersRepository.findByEmail(email);
-        if (customers.isPresent()) {
-            customers.get().setPassword(new BCryptPasswordEncoder().encode(generatedPassword));
-            updateCustomer(customers.get().getCustomerID(), customers.get());
-        }else{
-            generatedPassword = null;
-        }
-        return generatedPassword;
-    }
 }
 
 

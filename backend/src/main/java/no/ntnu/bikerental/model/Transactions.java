@@ -6,7 +6,6 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name = "Transactions")
 public class Transactions {
     @Id
     @GeneratedValue

@@ -6,7 +6,6 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name = "Products")
 public class Products {
     private String productName;
     private String colour;

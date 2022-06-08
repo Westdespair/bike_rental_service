@@ -7,7 +7,6 @@ import java.util.Collection;
  *
  */
 @Entity
-@Table(name = "Locations")
 public class Locations {
     private@Id
     @GeneratedValue

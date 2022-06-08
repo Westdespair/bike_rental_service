@@ -2,7 +2,6 @@ package no.ntnu.bikerental.model;
 
 import javax.persistence.*;
 @Entity
-@Table(name = "Orders")
 public class Orders {
     @Id
     @GeneratedValue

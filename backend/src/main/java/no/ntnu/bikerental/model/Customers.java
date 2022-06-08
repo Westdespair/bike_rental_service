@@ -6,7 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity(name = "customers")
-@Table(name = "Customers")
 public class Customers {
     @Id
     @GeneratedValue

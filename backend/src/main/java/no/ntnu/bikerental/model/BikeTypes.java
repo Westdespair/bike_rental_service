@@ -9,7 +9,6 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "BikeTypes")
 public class BikeTypes {
     @Id
     @GeneratedValue

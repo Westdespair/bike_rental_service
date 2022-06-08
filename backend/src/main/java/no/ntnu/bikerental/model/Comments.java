@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Comments")
 public class Comments {
     @Id
     @GeneratedValue

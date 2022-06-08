@@ -7,7 +7,6 @@ import java.sql.Date;
  *
  */
 @Entity
-@Table(name = "BikeRentals", schema = "bikerental")
 public class BikeRentals {
     @Id
     @GeneratedValue
