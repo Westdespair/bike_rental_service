@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../static/css/header.css" type="text/css"/>
     <link rel="stylesheet" href="../static/css/footer.css" type="text/css"/>
     <link rel="stylesheet" href="../static/css/body-template.css" type="text/css"/>
-
+    <link rel="stylesheet" href="../static/css/login.css" type="text/css"/>
 
     <title>Keep Rolling, Rolling, Rolling</title>
 </head>
@@ -20,13 +20,46 @@
     <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
     <div class="nav-bar">
         <button type="button" class="shopping-cart" onclick="location.href='#'"></button>
-        <button type="button" class="login-button" onclick="location.href='#'">
+        <button type="button" class="login-button" onclick="document.getElementById('id01').style.display='block'">
         </button>
     </div>
 </header>
 <div class="header-bar"></div>
 
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
 
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="/action_page.php">
+
+
+        <div class="container">
+            <label class="text1" for="uname"><b>Username</b></label>
+            <input type="text" class="placeholder" placeholder="Enter Username" name="uname" required id="uname">
+
+
+
+            <label class="text1" for="psw"><b>Password</b></label>
+            <input type="password" class="placeholder" placeholder="Enter Password" name="psw" required id="psw">
+
+
+        </div>
+            <div class="button-container">
+            <button class="login-button2" type="submit">Login</button>
+            <label>
+
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button class="cancel-button" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
 
 <div class="hero-part">
     <div class="hero-img">
