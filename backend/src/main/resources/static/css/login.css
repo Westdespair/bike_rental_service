@@ -32,6 +32,7 @@
     padding-top: 10rem;
 }
 
+
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
@@ -39,7 +40,7 @@
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     width: 30%; /* Could be more or less, depending on screen size */
-    height: 400px;
+    height: 450px;
 
 }
 
@@ -62,6 +63,16 @@
     font-size: large;
     color: #ffffff;
     border:none;
+    box-shadow: 0 0.125rem 0.25rem #a6a6a6;
+}
+
+.placeholder1{
+    height: 30px;
+    margin: auto;
+    width: 70%;
+    border: 2px solid var(--box-shadow);
+    padding: 10px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0.125rem 0.25rem #a6a6a6;
 }
 
@@ -96,7 +107,7 @@
     padding-top: .8rem;
 }
 
-.button-container{
+.button-container1{
     display: flex;
     justify-content: space-between;
     width: 70%;
@@ -106,6 +117,13 @@
 .psw{
     display: block;
     margin: auto;
+    text-align: center;
+}
+
+.create-user{
+
+    display: block;
+    margin: 1rem 5rem auto;
     text-align: center;
 }
 

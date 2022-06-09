@@ -8,6 +8,7 @@
     --background: #00ff00;
     --box-shadow: #00ff00;
     --text: #009800;
+    --texts: #009600;
     --text-backround: #ececec;
 }
 
@@ -29,8 +30,118 @@
 
 }
 
-.choice-paint{
-    width: 30rem;
-    height: 30rem;
-    background: #00d200;
+.nm-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 0.125rem 0.25rem var(--text);
+    background: white;
+    transition: transform var(--transition);
+    padding: 1rem;
+
+    border-radius: var(--border-radius);
 }
+
+.nm-cont{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.textile-bag{
+    margin: auto;
+    width: 12rem;
+
+    border-radius: var(--border-radius);
+}
+
+.paint-box{
+    margin: auto;
+    width: 12rem;
+    border-radius: var(--border-radius);
+}
+
+.nm-text{
+    width: 35rem;
+    color: var(--text);
+    background: var(--text-backround);
+    border-radius: var(--border-radius);
+    margin: auto 2rem;
+}
+
+#nm-text1{
+    margin-top: 2rem;
+}
+
+#nm-color{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+
+.choice-textile-bag{
+    margin-top: 2rem;
+}
+
+.button-containers{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+}
+
+.next-buttons{
+    align-items: center;
+    background-image: linear-gradient(144deg,#19900d, #3be538 50%,#00DDEB);
+    border: 0;
+    border-radius: var(--border-radius);
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-family: Phantomsans, sans-serif;
+    font-weight: inherit;
+    padding: 2rem 6rem;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+
+    width: 8rem;
+    height: 3rem;
+    font-size: 2rem;
+}
+
+.next-buttons:active {
+    transform: scale(0.95);
+}
+
+/*//////////////////*/
+
+.nm-checkbox{
+    margin: auto;
+
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+}
+
+.nm-checkbox1{
+    width: 3rem;
+    height: 3rem;
+    color: #00d200;
+}
+

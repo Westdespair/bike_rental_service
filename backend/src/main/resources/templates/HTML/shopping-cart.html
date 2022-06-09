@@ -9,20 +9,54 @@
     <link rel="stylesheet" href="../../static/css/footer.css" type="text/css"/>
     <link rel="stylesheet" href="../../static/css/body-template.css" type="text/css"/>
     <link rel="stylesheet" href="../../static/css/shopping-cart.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/login.css" type="text/css"/>
     <title>Keep Rolling, Rolling, Rolling</title>
 
 </head>
 <body>
 
 <header class="header" th:fragment="header">
-    <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
+    <button type="button" class="header-logo" onclick="location.href='../index.html'"></button>
     <div class="nav-bar">
-        <button type="button" class="shopping-cart" onclick="location.href='#'"></button>
-        <button type="button" class="login-button" onclick="location.href='#'">
+        <button type="button" class="shopping-cart" onclick="location.href='shopping-cart.html'"></button>
+        <button type="button" class="login-button" onclick="document.getElementById('id01').style.display='block'">
         </button>
     </div>
 </header>
 <div class="header-bar"></div>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="/action_page.php">
+
+
+        <div class="container">
+            <label class="text1" for="uname"><b>Username</b></label>
+            <input type="text" class="placeholder1" placeholder="Enter Username" name="uname" required id="uname">
+
+
+            <label class="text1" for="psw"><b>Password</b></label>
+            <input type="password" class="placeholder1" placeholder="Enter Password" name="psw" required id="psw">
+
+            <label class="remember1">
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+        <div class="button-container1">
+
+            <button class="cancel-button" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            <button class="login-button2" type="submit">Login</button>
+        </div>
+        <div class="container1">
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <span class="create-user"> <a href="create-user.html">Create user</a> </span>        </div>
+
+    </form>
+</div>
 
     <h1 class="my-cart">My Cart</h1>
 
@@ -48,7 +82,7 @@
                     </div>
                     <div class="quantity">
                         <h3 class="item-h">Quantity</h3>
-                        <label for="number"></label><input type="number" value="1" id="number" required>
+                        <label for="number"></label><input class="quantity-input" type="number" value="1" id="number" required>
                     </div>
                     <div class="total-price">
                         <h3 class="item-h">Total</h3>
@@ -75,7 +109,7 @@
                     </div>
                     <div class="quantity">
                         <h3>Quantity</h3>
-                        <label for="number"></label><input type="number" value="1" id="number2" required>
+                        <label for="number2"></label><input class="quantity-input" type="number" value="1" id="number2" required>
                     </div>
                     <div class="total-price">
                         <h3>Total</h3>
@@ -102,7 +136,7 @@
                     </div>
                     <div class="quantity">
                         <h3>Quantity</h3>
-                        <label for="number"></label><input type="number" value="1" id="number3" required>
+                        <label for="number3"></label><input class="quantity-input" type="number" value="1" id="number3" required>
                     </div>
                     <div class="total-price">
                         <h3>Total</h3>
@@ -131,12 +165,12 @@
                         <p class="values">-0 NOK</p>
                     </div>
                     <div class="discount">
-                        <p class="cost">Discount:</p>
-                        <p class="values">-0 NOK</p>
+                        <p class="cost">Bikes x 2</p>
+                        <p class="values">300 NOK/pr hour</p>
                     </div>
                     <div class="total">
                         <p class="total-text">TOTAL:</p>
-                        <p class="total-text">126 NOK</p>
+                        <p class="total-text">250 NOK</p>
                     </div>
                     <button class="checkout-button" type="submit" value="Checkout" id="checkout-button">Checkout</button>
                 </div>

@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../static/css/footer.css" type="text/css"/>
     <link rel="stylesheet" href="../static/css/body-template.css" type="text/css"/>
     <link rel="stylesheet" href="../static/css/login.css" type="text/css"/>
-
     <title>Keep Rolling, Rolling, Rolling</title>
 </head>
 <body>
@@ -19,7 +18,7 @@
 <header class="header" th:fragment="header">
     <button type="button" class="header-logo" onclick="location.href='index.html'"></button>
     <div class="nav-bar">
-        <button type="button" class="shopping-cart" onclick="location.href=''"></button>
+        <button type="button" class="shopping-cart" onclick="location.href='HTML/shopping-cart.html'"></button>
         <button type="button" class="login-button" onclick="document.getElementById('id01').style.display='block'">
         </button>
     </div>
@@ -47,14 +46,14 @@
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
         </div>
-        <div class="button-container">
+        <div class="button-container1">
 
             <button class="cancel-button" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
             <button class="login-button2" type="submit">Login</button>
         </div>
         <div class="container1">
             <span class="psw">Forgot <a href="#">password?</a></span>
-            <span class="create-user"></span>
+            <span class="create-user"> <a href="./HTML/create-user.html">Create user</a> </span>
         </div>
 
     </form>

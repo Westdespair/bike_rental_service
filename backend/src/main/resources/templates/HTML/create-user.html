@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" type="image/png" href="../../static/pictures/bicycle_icon_256x256.png" />
+    <link rel="stylesheet" href="../../static/css/header.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/footer.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/body-template.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/shopping-cart.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/login.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/css/create-user.css" type="text/css"/>
+    <title>Keep Rolling, Rolling, Rolling</title>
+
+</head>
+<body>
+
+<header class="header" th:fragment="header">
+    <button type="button" class="header-logo" onclick="location.href='../index.html'"></button>
+    <div class="nav-bar">
+        <button type="button" class="shopping-cart" onclick="location.href='shopping-cart.html'"></button>
+        <button type="button" class="login-button" onclick="document.getElementById('id01').style.display='block'">
+        </button>
+    </div>
+</header>
+<div class="header-bar"></div>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="/action_page.php">
+
+
+        <div class="container">
+            <label class="text1" for="uname"><b>Username</b></label>
+            <input type="text" class="placeholder" placeholder="Enter Username" name="uname" required id="uname">
+
+
+            <label class="text1" for="psw"><b>Password</b></label>
+            <input type="password" class="placeholder" placeholder="Enter Password" name="psw" required id="psw">
+
+            <label class="remember1">
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+        <div class="button-container1">
+
+            <button class="cancel-button" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            <button class="login-button2" type="submit">Login</button>
+        </div>
+        <div class="container1">
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <span class="create-user"> <a href="create-user.html">Create user</a> </span>
+        </div>
+
+    </form>
+</div>
+
+
+<div class="modal3">
+  <span class="create-user"></span>
+
+    <div class="modal-content3">
+
+
+        <div class="container3">
+            <label class="text3" for="username"><b>Username</b></label>
+            <input type="text" class="placeholder1" placeholder="Enter Username" name="uname" required id="username">
+
+            <label class="text3" for="f-name"><b>First Name</b></label>
+            <input type="text" class="placeholder1" placeholder="First Name" name="psw" required id="f-name">
+
+            <label class="text3" for="l-name"><b>Last Name</b></label>
+            <input type="text" class="placeholder1" placeholder="Last Name" name="uname" required id="l-name">
+
+
+            <label class="text3" for="email"><b>Email</b></label>
+            <input type="email" class="placeholder1" placeholder="Email" name="psw" required id="email">
+
+            <label class="text3" for="country"><b>Country</b></label>
+            <input type="text" class="placeholder1" placeholder="Country" name="uname" required id="country">
+
+            <label class="text3" for="password1"><b>Create Password</b></label>
+            <input type="password" class="placeholder1" placeholder="Password" name="psw" required id="password1">
+
+            <label class="text3" for="password"><b>Confirm Password</b></label>
+            <input type="password" class="placeholder1" placeholder="Confirm Password" name="psw" required id="password">
+
+        </div>
+        <div class="button-container3">
+
+            <button class="cancel-button3" type="button" onclick="location.href='../index.html'">Cancel</button>
+            <button class="create-user3" type="submit">Create User</button>
+        </div>
+        <div class="container3">
+        </div>
+
+    </div>
+</div>
+
+
+
+<footer class="main-footer" th:fragment="footer">
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-heading footer-1">
+                <h2>About Us</h2>
+                <a href="#">Blog</a>
+                <a href="#">Demo</a>
+                <a href="#">Customers</a>
+                <a href="#">Investors</a>
+                <a href="#">Terms Of Service</a>
+            </div>
+            <div class="footer-heading footer-2">
+                <h2>Contact Us</h2>
+                <a href="#">Jobs</a>
+                <a href="#">Support</a>
+                <a href="#">Contact</a>
+                <a href="#">Sponsorship</a>
+            </div>
+            <div class="footer-heading footer-3">
+                <h2>Social Media</h2>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Youtube</a>
+                <a href="#">Twitter</a>
+            </div>
+            <div class="footer-email-form">
+                <h2>Join our newsletter</h2>
+                <label for="footer-email"></label><input type="email" placeholder="Enter your email address" id="footer-email">
+                <button type="submit" value="Sign Up" id="footer-email-btn">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

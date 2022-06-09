@@ -1,0 +1,107 @@
+/* The Modal (background) */
+
+* {
+    margin: 0;
+    padding: 0;
+    --transition: 0.15s;
+    --border-radius: 0.5rem;
+    --background: #00ff00;
+    --box-shadow: #00ff00;
+    --text: #009800;
+    --text-backround: #ececec;
+}
+
+.text3{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.modal3 {
+    height: 100%;
+}
+
+/* Modal Content/Box */
+.modal-content3 {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    width: 35%; /* Could be more or less, depending on screen size */
+    height: 1000px;
+    text-align: center;
+
+}
+
+.create-user3{
+    background-color: var(--box-shadow);
+    height: 50px;
+    width: 110px;
+    border-radius: var(--border-radius);
+    font-size: large;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem #a6a6a6;
+}
+
+.cancel-button3{
+    background-color: grey;
+    height: 50px;
+    width: 110px;
+    border-radius: var(--border-radius);
+    font-size: large;
+    color: #ffffff;
+    border:none;
+    box-shadow: 0 0.125rem 0.25rem #a6a6a6;
+}
+
+.placeholder3{
+    height: 40px;
+    width: 100%;
+    border: 2px solid var(--box-shadow);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.125rem 0.25rem #a6a6a6;
+}
+
+
+.container3{
+    width: 100%;
+    display: grid;
+    align-content: center;
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.container3{
+    margin: auto;
+    display: block;
+
+}
+
+.remember3{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: .8rem;
+}
+
+.button-container3{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.5rem auto 1rem;
+}
+
+.psw3{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+
